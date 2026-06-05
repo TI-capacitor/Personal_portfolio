@@ -1,0 +1,21 @@
+body{
+  font-family:monospace;
+}
+
+hr{
+  color:black;
+}
+
+    .container{
+      max-width: 850px;
+      margin: auto;
+    }
+
+    h1{
+      margin-bottom: 5px;
+      font-size: 32px;
+      text-align:center;
+    }
+
+    
+    
