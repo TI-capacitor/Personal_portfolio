@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Irrigation System</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Automatic Irrigation System</h1>
+    <p>Embedded Systems | PCB Design | Arduino | Bluetooth</p>
+</header>
+
+<section>
+    <h2>Project Overview</h2>
+    <p>
+        Designed and developed an autonomous irrigation controller capable
+        of monitoring environmental conditions and automatically watering
+        crops. The system was intended for home agriculture applications
+        while supporting future deployment in remote locations.
+    </p>
+</section>
+
+<section>
+    <h2>Project Goals</h2>
+    <ul>
+        <li>Monitor soil moisture levels</li>
+        <li>Monitor environmental temperature</li>
+        <li>Control irrigation automatically</li>
+        <li>Provide Bluetooth communication</li>
+        <li>Support battery-backed operation</li>
+        <li>Prepare for future solar integration</li>
+    </ul>
+</section>
+
+<section>
+    <h2>System Architecture</h2>
+
+    <img src="../images/irrigation-block-diagram.png"
+         alt="System Block Diagram">
+
+    <p>
+        The controller gathers sensor data, evaluates irrigation conditions,
+        and actuates a solenoid valve when watering is required.
+    </p>
+</section>
+
+<section>
+    <h2>Hardware Design</h2>
+
+    <h3>Custom PCB</h3>
+
+    <img src="../images/pcb-render.png"
+         alt="PCB Render">
+
+    <ul>
+        <li>Designed custom PCB using KiCad</li>
+        <li>Considered trace routing and noise reduction</li>
+        <li>Generated manufacturing-ready Gerber files</li>
+        <li>Created complete Bill of Materials (BOM)</li>
+    </ul>
+
+</section>
+
+<section>
+    <h2>Software Architecture</h2>
+
+    <img src="../images/state-machine.png"
+         alt="State Machine">
+
+    <h3>Operating Modes</h3>
+
+    <ul>
+        <li><strong>Automatic Mode:</strong> Sensor-driven irrigation</li>
+        <li><strong>Maintenance Mode:</strong> Disables valve outputs while keeping controller powered</li>
+    </ul>
+
+    <h3>Features</h3>
+
+    <ul>
+        <li>Interrupt-driven button interface</li>
+        <li>Bluetooth serial communication</li>
+        <li>USB serial monitoring</li>
+        <li>LCD status display</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Engineering Challenges</h2>
+
+    <h3>Display Flickering</h3>
+
+    <p>
+        Early firmware refreshed the LCD continuously, resulting in
+        visible flickering. The display update logic was redesigned
+        to refresh only when values changed.
+    </p>
+
+    <h3>Firmware Architecture</h3>
+
+    <p>
+        The initial design relied on heavily coupled classes.
+        During refactoring, the firmware was reorganized using a
+        state-machine approach to improve maintainability and scalability.
+    </p>
+
+</section>
+
+<section>
+    <h2>Lessons Learned</h2>
+
+    <ul>
+        <li>Importance of modular firmware architecture</li>
+        <li>Benefits of state machines in embedded systems</li>
+        <li>PCB design considerations for mixed-signal systems</li>
+        <li>Designing systems for maintainability</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Future Improvements</h2>
+
+    <ul>
+        <li>Solar charging subsystem</li>
+        <li>Wireless dashboard</li>
+        <li>Data logging</li>
+        <li>Cloud monitoring</li>
+        <li>Expanded irrigation zones</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Gallery</h2>
+
+    <img src="../images/project1.jpg" alt="">
+    <img src="../images/project2.jpg" alt="">
+    <img src="../images/project3.jpg" alt="">
+</section>
+
+<section>
+    <h2>Resources</h2>
+
+    <ul>
+        <li><a href="#">GitHub Repository</a></li>
+        <li><a href="#">Gerber Files</a></li>
+        <li><a href="#">BOM</a></li>
+        <li><a href="#">Documentation</a></li>
+    </ul>
+</section>
+
+</body>
+</html>
