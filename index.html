@@ -4,146 +4,428 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daniel Barreiro Torres | Engineering Portfolio</title>
-
-  <link href="/style.css" rel="stylesheet">
-
-  <style>
-    
-    
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="heading">
-  <h1>DANIEL BARREIRO TORRES</h1>
-  <h2> Computer Engineering Junior</strong><h2></h2>
 
-  <p>
-    <strong>Email: danielbarreiro014@gmail.com |
-    GitHub: <a href="https://github.com/TI-capacitor">TI-capacitor</a> |
-    <a href="./docs/Daniel_Resume_DEF.pdf">Resume</a>
-    </strong>
-  </p>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <span class="nav-logo">DBT</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#volunteering">Volunteering</a></li>
+    </ul>
+    <a href="./docs/Daniel_Resume_DEF.pdf" class="btn-nav">Resume ↗</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mm-link">About</a></li>
+      <li><a href="#projects" class="mm-link">Projects</a></li>
+      <li><a href="#experience" class="mm-link">Experience</a></li>
+      <li><a href="#volunteering" class="mm-link">Volunteering</a></li>
+      <li><a href="./docs/Daniel_Resume_DEF.pdf" class="mm-link">Resume ↗</a></li>
+    </ul>
   </div>
 
-
-  <hr>
-  
-
-  <h2>About Me</h2>
-  <p 
-    style="text-align: center;">
-    Computer Engineering junior with hands-on experience in
-     embedded systems, PCB design, and hardware development; additional experience with HTML, CSS and JS.
-     Actively seeking opportunities to apply my knowledge and expertise to solve real-world problems.
-  </p>
-
-   <hr>
-
-  <h2>Personal Projects</h2>
-
-  <div class="project">
-    <div>
-     
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="hero-bg">
+      <!-- Circuit board SVG texture -->
+      <svg class="circuit-svg" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <g stroke="#E4572E" stroke-width="1" fill="none" opacity="0.13">
+          <line x1="0" y1="80" x2="200" y2="80"/><circle cx="200" cy="80" r="4"/>
+          <line x1="200" y1="80" x2="200" y2="160"/><circle cx="200" cy="160" r="4"/>
+          <line x1="200" y1="160" x2="400" y2="160"/>
+          <line x1="400" y1="160" x2="400" y2="40"/><circle cx="400" cy="40" r="4"/>
+          <line x1="400" y1="40" x2="600" y2="40"/><circle cx="600" cy="40" r="4"/>
+          <line x1="600" y1="40" x2="600" y2="220"/><circle cx="600" cy="220" r="4"/>
+          <line x1="600" y1="220" x2="800" y2="220"/>
+          <line x1="100" y1="300" x2="300" y2="300"/><circle cx="300" cy="300" r="4"/>
+          <line x1="300" y1="300" x2="300" y2="400"/><circle cx="300" cy="400" r="4"/>
+          <line x1="300" y1="400" x2="500" y2="400"/><circle cx="500" cy="400" r="4"/>
+          <line x1="500" y1="400" x2="500" y2="260"/><circle cx="500" cy="260" r="4"/>
+          <line x1="500" y1="260" x2="700" y2="260"/><circle cx="700" cy="260" r="4"/>
+          <line x1="700" y1="260" x2="700" y2="460"/>
+          <line x1="50" y1="450" x2="250" y2="450"/><circle cx="250" cy="450" r="4"/>
+          <line x1="150" y1="0" x2="150" y2="80"/>
+          <line x1="450" y1="160" x2="450" y2="0"/>
+          <circle cx="150" cy="0" r="4"/>
+          <rect x="380" y="140" width="40" height="40" rx="2"/>
+          <rect x="580" y="200" width="40" height="40" rx="2"/>
+          <rect x="280" y="280" width="40" height="40" rx="2"/>
+        </g>
+      </svg>
     </div>
 
-    <div>
-      <h3>Autonomous rover (Eugene v0.2.0) </h3>
-      <ul>
-      
-      <li>Assembled the rover using my own schematic and code</li>
-      <li>created header files to reference segments of code</li>
-      <li>Used as a prototype for the PR NASA Space Grant experience</li>
-      
-      </ul>
-    </div>
-  </div>
-
-  <div class="project">
-    
-
-    <div id="irrigation">
-      <h3>Automatic Irrigation System</h3>
-      <ul>
-      <li>Created a autonomous irrigation system for crops grown at home</li>
-      <li>Moisture sensor provides feedback to control solenoid valve</li>
-      <li>Designed my own PCB, taking into consideration signal noise and inductance in design; Gerber and BOM files can be found 
-        <a href="https://github.com/TI-capacitor/Embedded_Irrigation_system/tree/main/hardware/PCB">here</a></li>
-      <li>Provided Bluetooth control using an android application</li>
-      <li>Designed battery charging circuit for remote locations</li>
-      <li>Future solar panel connection under development</li>
-      </ul>
+    <div class="hero-content reveal">
+      <p class="hero-eyebrow">Computer Engineering Junior</p>
+      <h1 class="hero-name">Daniel<br>Barreiro<br>Torres</h1>
+      <p class="hero-tagline">Embedded Systems · PCB Design · Hardware Development</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="mailto:danielbarreiro014@gmail.com" class="btn-secondary">Get in Touch</a>
+      </div>
+      <div class="hero-links">
+        <a href="https://github.com/TI-capacitor" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="./docs/Daniel_Resume_DEF.pdf" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Resume
+        </a>
+      </div>
     </div>
 
-  </div>
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </header>
 
- <hr>
-
-  <h2>Experience</h2>
-
-  <h3>Founder & Lead Tutor - Dan Tutoring | Present</h3>
-  <ul>
-    <li>Design and manage databases to store student information and appointments</li>
-    <li>Manage scheduling, customer communication, and business operations independently.</li>
-    <li>Built full-stack appointment system from scratch to streamline appointments in a web page</li>
-  </ul>
-  
-
-  <div class="project">
- 
-    <div>
-      <h3>NASA Space Grant PR - Programming Team Leader | Aug 2025-Apr 2026</h3>
-     <ul>
-  <li>Led the NASA Lunabotics Software Subteam under emergency project conditions, reorganizing the previous work into a 3-phase execution plan</li>
-  <li>Improved team participation from approximately 22% to 100% for a key member, after implementing a more collaborative team culture.</li>
-  <li>Defined and executed a systems engineering–driven project life cycle under constraints.</li>
-  <li>Assigned tasks around clear technical deliverables, including actuator testing, LiDAR servo validation, Raspberry Pi GPIO validation, ESP32 Bluetooth control, and ROS 2 motor node development.</li>
-  <li>Provided instrumentation and Git training workshops like <a href="./docs/inst.pdf">this</a>.</li>
-  <li>Enforced an engineering notebook standard for clear documentation and traceability</li>
-  <li>Advanced the project despite limited funding by coordinating equipment orders, and contributing personal materials to prevent schedule delays.</li>
-  <li>Delivered project progress and methodology for EcoExploratorio, including a live presentation of the team’s progress.</li>
-  <li>Contributed to successful sponsorship efforts that secured funding for next semester's project.</li>
-</ul>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <span class="section-label">About Me</span>
+      <div class="about-grid reveal">
+        <div class="about-text">
+          <h2 class="section-title">Engineer at the intersection of hardware & software</h2>
+          <p>Computer Engineering junior with hands-on experience in embedded systems, PCB design, and hardware development — with a strong secondary foundation in web development (HTML, CSS, JS). I thrive when I can touch both the schematic and the codebase.</p>
+          <p>Currently at UPRM, I'm actively seeking opportunities to apply my skills to real-world challenges where precision engineering meets creative problem-solving.</p>
+          <div class="skill-tags">
+            <span>Embedded C/C++</span>
+            <span>PCB Design</span>
+            <span>KiCad</span>
+            <span>ROS 2</span>
+            <span>OpenCV / Python</span>
+            <span>ESP32 / Arduino</span>
+            <span>Raspberry Pi</span>
+            <span>LiDAR</span>
+            <span>Bluetooth / BLE</span>
+            <span>HTML / CSS / JS</span>
+          </div>
+        </div>
+        <div class="about-photo-wrap">
+          <!-- PLACEHOLDER: Replace src with your headshot photo -->
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="30" r="18" stroke="#E4572E" stroke-width="2"/>
+              <path d="M10 72c0-16.569 13.431-30 30-30s30 13.431 30 30" stroke="#E4572E" stroke-width="2"/>
+            </svg>
+            <p>Your Photo Here</p>
+          </div>
+          <div class="contact-pill">
+            <a href="mailto:danielbarreiro014@gmail.com">danielbarreiro014@gmail.com</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-  </div>
+  <!-- PROJECTS -->
+  <section class="section section-dark" id="projects">
+    <div class="container">
+      <span class="section-label light">Projects</span>
+      <h2 class="section-title light reveal">Things I've Built</h2>
 
-  <div class="project">
-    <div>
-     
+      <!-- PROJECT 1: Autonomous Rover -->
+      <div class="accordion reveal" data-open="false">
+        <button class="accordion-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-tag">Robotics</span>
+            <h3>Autonomous Rover — Eugene v0.2.0</h3>
+          </div>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="acc-inner">
+            <div class="acc-media">
+              <!-- PLACEHOLDER: Add rover photos/screenshots -->
+              <div class="img-placeholder">
+                <div class="img-ph-inner">
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="18" width="32" height="20" rx="3" stroke="#E4572E" stroke-width="2"/><circle cx="16" cy="40" r="4" stroke="#FFC914" stroke-width="2"/><circle cx="32" cy="40" r="4" stroke="#FFC914" stroke-width="2"/><rect x="18" y="10" width="12" height="10" rx="2" stroke="#E4572E" stroke-width="2"/><line x1="14" y1="26" x2="34" y2="26" stroke="#FFC914" stroke-width="2"/><line x1="14" y1="30" x2="28" y2="30" stroke="#FFC914" stroke-width="2"/></svg>
+                  <p>Rover Photo</p>
+                </div>
+              </div>
+              <div class="img-placeholder">
+                <div class="img-ph-inner">
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="2" stroke="#E4572E" stroke-width="2"/><polyline points="12,36 18,24 24,30 30,18 36,24" stroke="#FFC914" stroke-width="2" fill="none"/></svg>
+                  <p>Schematic</p>
+                </div>
+              </div>
+              <div class="img-placeholder">
+                <div class="img-ph-inner">
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="2" stroke="#E4572E" stroke-width="2"/><line x1="14" y1="18" x2="26" y2="18" stroke="#FFC914" stroke-width="2"/><line x1="14" y1="24" x2="34" y2="24" stroke="#FFC914" stroke-width="2"/><line x1="14" y1="30" x2="22" y2="30" stroke="#FFC914" stroke-width="2"/></svg>
+                  <p>Code Snippet</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc-details">
+              <ul>
+                <li>Fully assembled from a custom schematic and original firmware</li>
+                <li>Developed modular header files to segment and reuse code across subsystems</li>
+                <li>Served as hardware prototype for the PR NASA Space Grant Lunabotics experience</li>
+              </ul>
+              <div class="acc-badges">
+                <span>Embedded C</span><span>PCB</span><span>Autonomous Systems</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 2: Irrigation System -->
+      <div class="accordion reveal" data-open="false">
+        <button class="accordion-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-tag">PCB Design</span>
+            <h3>Automatic Irrigation System</h3>
+          </div>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="acc-inner">
+            <div class="acc-media">
+              <!-- PLACEHOLDER: Add PCB design, gerber renders, and hardware photos -->
+              <div class="img-placeholder">
+                <div class="img-ph-inner">
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="2" stroke="#E4572E" stroke-width="2"/><rect x="12" y="12" width="10" height="8" rx="1" stroke="#FFC914" stroke-width="2"/><rect x="26" y="12" width="10" height="8" rx="1" stroke="#FFC914" stroke-width="2"/><line x1="10" y1="28" x2="38" y2="28" stroke="#E4572E" stroke-width="1.5"/><circle cx="16" cy="34" r="3" stroke="#FFC914" stroke-width="2"/><circle cx="32" cy="34" r="3" stroke="#FFC914" stroke-width="2"/></svg>
+                  <p>PCB Layout</p>
+                </div>
+              </div>
+              <div class="img-placeholder">
+                <div class="img-ph-inner">
+                  <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="#E4572E" stroke-width="2"/><path d="M24 14v4M24 30v4M14 24h4M30 24h4" stroke="#FFC914" stroke-width="2"/><circle cx="24" cy="24" r="5" stroke="#E4572E" stroke-width="2"/></svg>
+                  <p>Schematic</p>
+                </div>
+              </div>
+              <div class="img-placeholder">
+                <div class="img-ph-inner">
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="2" stroke="#E4572E" stroke-width="2"/><path d="M14 22 Q20 14 26 22 T38 22" stroke="#FFC914" stroke-width="2" fill="none"/><line x1="14" y1="30" x2="34" y2="30" stroke="#FFC914" stroke-width="2"/></svg>
+                  <p>Assembly Photo</p>
+                </div>
+              </div>
+              <div class="img-placeholder">
+                <div class="img-ph-inner">
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="10" width="40" height="28" rx="3" stroke="#E4572E" stroke-width="2"/><rect x="10" y="16" width="28" height="16" rx="1" stroke="#FFC914" stroke-width="1.5"/><line x1="18" y1="16" x2="18" y2="32" stroke="#FFC914" stroke-width="1"/><line x1="26" y1="16" x2="26" y2="32" stroke="#FFC914" stroke-width="1"/><line x1="10" y1="24" x2="38" y2="24" stroke="#FFC914" stroke-width="1"/></svg>
+                  <p>Android App UI</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc-details">
+              <ul>
+                <li>Built an autonomous irrigation system for home-grown crops — moisture sensor drives solenoid valve control in a closed feedback loop</li>
+                <li>Designed a custom PCB with deliberate attention to signal noise and parasitic inductance</li>
+                <li>Added Bluetooth control via a custom Android application</li>
+                <li>Designed on-board battery charging circuit for remote, off-grid deployment</li>
+                <li>Solar panel integration currently under development</li>
+              </ul>
+              <div class="acc-badges">
+                <span>KiCad</span><span>Gerber / BOM</span><span>Bluetooth</span><span>ESP32</span><span>Android</span>
+              </div>
+              <a href="https://github.com/TI-capacitor/Embedded_Irrigation_system/tree/main/hardware/PCB" class="acc-link" target="_blank" rel="noopener">View PCB Files on GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-    <div>
-      <h3>RTX Autonomous Vehicle Competition | Jan 2025 - May 2025</h3>
-      <ul>
-         <li>Secured <strong>third place</strong> for our university</li>
-      <li>Implemented Open CV & Python to scan Aruco Markers</li>
-      <li>Took Drone Safety classes</li>
-      <li>Experience assembling amateur drone</li>
-      <li>Hands on milling machine experience, developing threads for drone spacers</li>
-     
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <span class="section-label">Experience</span>
+      <h2 class="section-title reveal">Where I've Led</h2>
+
+      <!-- EXP 1: NASA -->
+      <div class="accordion reveal" data-open="false">
+        <button class="accordion-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-tag highlight">NASA Space Grant PR</span>
+            <h3>Programming Team Leader</h3>
+            <span class="acc-date">Aug 2025 – Apr 2026</span>
+          </div>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="acc-inner">
+            <div class="acc-media">
+              <!-- PLACEHOLDER: Add team photos, presentations, rover progress shots -->
+              <div class="img-placeholder">
+                <div class="img-ph-inner">
+                  <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="8" stroke="#E4572E" stroke-width="2"/><path d="M8 40c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="#E4572E" stroke-width="2"/></svg>
+                  <p>Team Photo</p>
+                </div>
+              </div>
+              <div class="img-placeholder">
+                <div class="img-ph-inner">
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="8" width="36" height="28" rx="2" stroke="#E4572E" stroke-width="2"/><line x1="12" y1="16" x2="36" y2="16" stroke="#FFC914" stroke-width="2"/><line x1="12" y1="22" x2="30" y2="22" stroke="#FFC914" stroke-width="2"/><line x1="12" y1="28" x2="24" y2="28" stroke="#FFC914" stroke-width="2"/><rect x="18" y="36" width="12" height="4" stroke="#E4572E" stroke-width="1.5"/></svg>
+                  <p>Presentation Slide</p>
+                </div>
+              </div>
+              <div class="img-placeholder">
+                <div class="img-ph-inner">
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="18" width="32" height="20" rx="3" stroke="#E4572E" stroke-width="2"/><circle cx="16" cy="40" r="4" stroke="#FFC914" stroke-width="2"/><circle cx="32" cy="40" r="4" stroke="#FFC914" stroke-width="2"/><circle cx="24" cy="12" r="6" stroke="#E4572E" stroke-width="2"/></svg>
+                  <p>Rover Progress</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc-details">
+              <ul>
+                <li>Led the Lunabotics Software Subteam under emergency conditions, restructuring prior work into a clear 3-phase execution plan</li>
+                <li>Grew key member participation from ~22% to 100% by fostering a genuinely collaborative team culture</li>
+                <li>Defined a systems-engineering–driven project life cycle under tight resource constraints</li>
+                <li>Coordinated technical deliverables: actuator testing, LiDAR servo validation, Raspberry Pi GPIO, ESP32 Bluetooth, and ROS 2 motor node development</li>
+                <li>Ran instrumentation and Git training workshops for the team</li>
+                <li>Enforced an engineering notebook standard for documentation and traceability</li>
+                <li>Advanced the project despite limited funding by contributing personal materials to prevent schedule slips</li>
+                <li>Delivered a live progress presentation at EcoExploratorio and contributed to securing sponsorship for the next semester</li>
+              </ul>
+              <div class="acc-badges">
+                <span>ROS 2</span><span>Raspberry Pi</span><span>ESP32</span><span>LiDAR</span><span>Git</span><span>Team Leadership</span>
+              </div>
+              <a href="./docs/inst.pdf" class="acc-link" target="_blank">View Git/Instrumentation Workshop ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXP 2: RTX Drone -->
+      <div class="accordion reveal" data-open="false">
+        <button class="accordion-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-tag">RTX Competition</span>
+            <h3>Autonomous Vehicle Competition</h3>
+            <span class="acc-date">Jan 2025 – May 2025</span>
+          </div>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="acc-inner">
+            <div class="acc-media">
+              <!-- PLACEHOLDER: Add drone photos, Aruco marker demos, milling work -->
+              <div class="img-placeholder">
+                <div class="img-ph-inner">
+                  <svg viewBox="0 0 48 48" fill="none"><line x1="12" y1="12" x2="36" y2="36" stroke="#E4572E" stroke-width="2"/><line x1="36" y1="12" x2="12" y2="36" stroke="#E4572E" stroke-width="2"/><circle cx="24" cy="24" r="6" stroke="#FFC914" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="#E4572E" stroke-width="2"/><circle cx="36" cy="12" r="4" stroke="#E4572E" stroke-width="2"/><circle cx="12" cy="36" r="4" stroke="#E4572E" stroke-width="2"/><circle cx="36" cy="36" r="4" stroke="#E4572E" stroke-width="2"/></svg>
+                  <p>Drone Build</p>
+                </div>
+              </div>
+              <div class="img-placeholder">
+                <div class="img-ph-inner">
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="10" width="28" height="28" stroke="#E4572E" stroke-width="2"/><rect x="14" y="14" width="8" height="8" fill="#FFC914" opacity="0.5"/><rect x="26" y="14" width="8" height="8" stroke="#FFC914" stroke-width="1.5"/><rect x="14" y="26" width="8" height="8" stroke="#FFC914" stroke-width="1.5"/><rect x="22" y="22" width="4" height="4" fill="#FFC914"/></svg>
+                  <p>Aruco Marker Demo</p>
+                </div>
+              </div>
+              <div class="img-placeholder">
+                <div class="img-ph-inner">
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="20" width="32" height="16" rx="2" stroke="#E4572E" stroke-width="2"/><rect x="18" y="12" width="12" height="10" rx="1" stroke="#FFC914" stroke-width="2"/><circle cx="16" cy="36" r="2" fill="#FFC914"/><circle cx="32" cy="36" r="2" fill="#FFC914"/></svg>
+                  <p>Milling Work</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc-details">
+              <div class="achievement-badge">🥉 Third Place — University</div>
+              <ul>
+                <li>Implemented OpenCV + Python pipeline to detect and respond to Aruco Markers for autonomous navigation</li>
+                <li>Completed formal Drone Safety certification</li>
+                <li>Hands-on assembly of an amateur drone from components</li>
+                <li>Machined custom spacers using a milling machine (threading, precision work)</li>
+              </ul>
+              <div class="acc-badges">
+                <span>OpenCV</span><span>Python</span><span>Aruco Markers</span><span>Drone Assembly</span><span>CNC Milling</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXP 3: Tutoring -->
+      <div class="accordion reveal" data-open="false">
+        <button class="accordion-header" aria-expanded="false">
+          <div class="acc-left">
+            <span class="acc-tag">Entrepreneurship</span>
+            <h3>Founder & Lead Tutor — Dan Tutoring</h3>
+            <span class="acc-date">Present</span>
+          </div>
+          <span class="acc-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <div class="acc-inner">
+            <div class="acc-media">
+              <!-- PLACEHOLDER: Add screenshots of your appointment system / dashboard -->
+              <div class="img-placeholder">
+                <div class="img-ph-inner">
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="8" width="36" height="32" rx="3" stroke="#E4572E" stroke-width="2"/><line x1="6" y1="18" x2="42" y2="18" stroke="#FFC914" stroke-width="2"/><rect x="12" y="24" width="8" height="6" rx="1" stroke="#FFC914" stroke-width="1.5"/><rect x="26" y="24" width="8" height="6" rx="1" stroke="#FFC914" stroke-width="1.5"/></svg>
+                  <p>Booking System UI</p>
+                </div>
+              </div>
+              <div class="img-placeholder">
+                <div class="img-ph-inner">
+                  <svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="20" rx="12" ry="8" stroke="#E4572E" stroke-width="2"/><path d="M12 20c0 8 24 8 24 0" stroke="#FFC914" stroke-width="2"/><line x1="24" y1="28" x2="24" y2="38" stroke="#FFC914" stroke-width="2"/><line x1="16" y1="38" x2="32" y2="38" stroke="#FFC914" stroke-width="2"/></svg>
+                  <p>Database Schema</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc-details">
+              <ul>
+                <li>Designed and manages databases to track student records, sessions, and appointments</li>
+                <li>Built a full-stack web appointment system from scratch to replace manual scheduling</li>
+                <li>Handles all scheduling, customer communication, and business operations independently</li>
+              </ul>
+              <div class="acc-badges">
+                <span>Full-Stack</span><span>Database Design</span><span>JS</span><span>Business Operations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-  </div>
+  <!-- VOLUNTEERING -->
+  <section class="section section-accent" id="volunteering">
+    <div class="container">
+      <span class="section-label">Giving Back</span>
+      <h2 class="section-title reveal">Volunteering</h2>
+      <div class="vol-grid reveal">
+        <div class="vol-card">
+          <div class="vol-icon">🌱</div>
+          <h3>Teaching Assistant — SPROUTING</h3>
+          <p>University of Puerto Rico Mayagüez</p>
+        </div>
+        <div class="vol-card">
+          <div class="vol-icon">📐</div>
+          <h3>Math Olympics Assistant</h3>
+          <p>Supporting students in competitive mathematics</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
- <hr>
-  <h2>Certifications</h2>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">DBT</span>
+      <div class="footer-links">
+        <a href="mailto:danielbarreiro014@gmail.com">danielbarreiro014@gmail.com</a>
+        <a href="https://github.com/TI-capacitor" target="_blank">GitHub</a>
+        <a href="./docs/Daniel_Resume_DEF.pdf" target="_blank">Resume</a>
+      </div>
+      <p class="footer-copy">© 2026 Daniel Barreiro Torres</p>
+    </div>
+  </footer>
 
-
-<div class="project">
-   
-   <p>In progress...</p>
-  </div>
-
-  <hr>
-
-  <div class="volunteering">
-    <h2>Volunteering</h2>
-    <h3>Teaching Assistant SPROUTING- University of Puerto Rico Mayagüez</h3>
-    <h3>Math olympics assistant</h3>
-
-  </div>
-
-<footer>@ 2026 Daniel Barreiro Torres</footer>
+  <script src="script.js"></script>
 </body>
 </html>
