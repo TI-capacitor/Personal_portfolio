@@ -11,7 +11,6 @@
 </head>
 <body>
 
-  <!-- Noise overlay (from Stitch) -->
   <div class="noise-overlay" aria-hidden="true"></div>
 
   <!-- NAV -->
@@ -44,12 +43,8 @@
 
   <!-- HERO -->
   <header class="hero" id="home">
-    <!-- Scanning line (from Stitch) -->
     <div class="scanning-line" aria-hidden="true"></div>
-
-
     <div class="hero-content reveal">
-      <!-- Status badge (from Stitch) -->
       <div class="hero-status">
         <span class="status-dot"></span>
         <span class="status-label">// SYSTEM_ONLINE</span>
@@ -72,10 +67,7 @@
         </a>
       </div>
     </div>
-
-    <a href="#about" class="scroll-hint" aria-label="Scroll down">
-      <span></span>
-    </a>
+    <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
   </header>
 
   <!-- ABOUT -->
@@ -86,7 +78,7 @@
         <div class="about-text">
           <h2 class="section-title">Engineer at the intersection of hardware &amp; software</h2>
           <p>Computer Engineering junior with hands-on experience in embedded systems, PCB design, and hardware development — with a strong secondary foundation in web development (HTML, CSS, JS). I thrive when I can touch both the schematic and the codebase.</p>
-          <p>Currently at Inter American University of Puerto Rico Bayamón, I'm actively seeking opportunities to apply my skills to real-world challenges where precision engineering meets creative problem-solving.</p>
+          <p>Currently student at Inter American University of Puerto Rico Bayamón campus, I'm actively seeking opportunities to apply my skills to real-world challenges where precision engineering meets creative problem-solving.</p>
           <div class="skill-tags">
             <span>/ Embedded C/C++</span>
             <span>/ PCB Design</span>
@@ -102,7 +94,11 @@
         </div>
         <div class="about-photo-wrap">
           <div class="photo-placeholder tech-frame">
-            <img src="Pictures/pfp.jpeg" alt="Daniel Barreiro Torres" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
+            <!--
+              YOUR HEADSHOT
+              Replace the src below with your photo path, e.g. src="img/headshot.jpg"
+            -->
+            <img src="Pictures/pfp.jpeg" alt="Daniel Barreiro Torres">
           </div>
           <div class="contact-pill">
             <a href="mailto:danielbarreiro014@gmail.com">danielbarreiro014@gmail.com</a>
@@ -134,7 +130,6 @@
           <div class="acc-right">
             <span class="acc-status-text">STATUS: LOCKED</span>
             <span class="acc-icon" aria-hidden="true">
-              <!-- lock SVG -->
               <svg class="icon-lock" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
               <svg class="icon-unlock" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
             </span>
@@ -143,24 +138,25 @@
         <div class="accordion-body">
           <div class="acc-inner">
             <div class="acc-media">
+
+              <!-- Rover Photo — e.g. src="img/rover-photo.jpg" -->
               <div class="img-placeholder">
-                <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="18" width="32" height="20" rx="3" stroke="#1FBFFF" stroke-width="2"/><circle cx="16" cy="40" r="4" stroke="#FFC914" stroke-width="2"/><circle cx="32" cy="40" r="4" stroke="#FFC914" stroke-width="2"/><rect x="18" y="10" width="12" height="10" rx="2" stroke="#1FBFFF" stroke-width="2"/><line x1="14" y1="26" x2="34" y2="26" stroke="#FFC914" stroke-width="2"/></svg>
-                  <p>Rover Photo</p>
-                </div>
+                <img src="Pictures/Eugene.jpeg" alt="Rover Photo">
+                <p class="img-label">Rover Photo</p>
               </div>
+
+              <!-- Rover Schematic — e.g. src="img/rover-schematic.jpg" -->
               <div class="img-placeholder">
-                <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="2" stroke="#1FBFFF" stroke-width="2"/><polyline points="12,36 18,24 24,30 30,18 36,24" stroke="#FFC914" stroke-width="2" fill="none"/></svg>
-                  <p>Schematic</p>
-                </div>
+                <img src="Pictures/eugene-schem.png" alt="Schematic">
+                <p class="img-label">Schematic</p>
               </div>
+
+              <!-- Rover Code — e.g. src="img/rover-code.jpg" -->
               <div class="img-placeholder">
-                <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="2" stroke="#1FBFFF" stroke-width="2"/><line x1="14" y1="18" x2="26" y2="18" stroke="#FFC914" stroke-width="2"/><line x1="14" y1="24" x2="34" y2="24" stroke="#FFC914" stroke-width="2"/><line x1="14" y1="30" x2="22" y2="30" stroke="#FFC914" stroke-width="2"/></svg>
-                  <p>Code Snippet</p>
-                </div>
+                <img src="Pictures/eugene-class.png" alt="Code Snippet">
+                <p class="img-label">Code Snippet</p>
               </div>
+
             </div>
             <div class="acc-details">
               <ul>
@@ -195,30 +191,31 @@
         <div class="accordion-body">
           <div class="acc-inner">
             <div class="acc-media">
+
+              <!-- PCB Layout — e.g. src="img/irrigation-pcb.jpg" -->
               <div class="img-placeholder">
-                <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="2" stroke="#1FBFFF" stroke-width="2"/><rect x="12" y="12" width="10" height="8" rx="1" stroke="#FFC914" stroke-width="2"/><rect x="26" y="12" width="10" height="8" rx="1" stroke="#FFC914" stroke-width="2"/><line x1="10" y1="28" x2="38" y2="28" stroke="#1FBFFF" stroke-width="1.5"/><circle cx="16" cy="34" r="3" stroke="#FFC914" stroke-width="2"/><circle cx="32" cy="34" r="3" stroke="#FFC914" stroke-width="2"/></svg>
-                  <p>PCB Layout</p>
-                </div>
+                <img src="Pictures/irrig-pcb.png" alt="PCB Layout">
+                <p class="img-label">PCB Layout</p>
               </div>
+
+              <!-- Schematic — e.g. src="img/irrigation-schematic.jpg" -->
               <div class="img-placeholder">
-                <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="#1FBFFF" stroke-width="2"/><path d="M24 14v4M24 30v4M14 24h4M30 24h4" stroke="#FFC914" stroke-width="2"/><circle cx="24" cy="24" r="5" stroke="#1FBFFF" stroke-width="2"/></svg>
-                  <p>Schematic</p>
-                </div>
+                <img src="Pictures/irrig-schem.png" alt="Schematic">
+                <p class="img-label">Schematic</p>
               </div>
+
+              <!-- Assembly Photo — e.g. src="img/irrigation-assembly.jpg" -->
               <div class="img-placeholder">
-                <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="2" stroke="#1FBFFF" stroke-width="2"/><path d="M14 22 Q20 14 26 22 T38 22" stroke="#FFC914" stroke-width="2" fill="none"/><line x1="14" y1="30" x2="34" y2="30" stroke="#FFC914" stroke-width="2"/></svg>
-                  <p>Assembly Photo</p>
-                </div>
+                <img src="Pictures/irrig-assembly.png" alt="Assembly Photo">
+                <p class="img-label">Assembly Photo</p>
               </div>
+
+              <!-- Android App — e.g. src="img/irrigation-app.jpg" -->
               <div class="img-placeholder">
-                <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="10" width="40" height="28" rx="3" stroke="#1FBFFF" stroke-width="2"/><rect x="10" y="16" width="28" height="16" rx="1" stroke="#FFC914" stroke-width="1.5"/><line x1="18" y1="16" x2="18" y2="32" stroke="#FFC914" stroke-width="1"/><line x1="26" y1="16" x2="26" y2="32" stroke="#FFC914" stroke-width="1"/><line x1="10" y1="24" x2="38" y2="24" stroke="#FFC914" stroke-width="1"/></svg>
-                  <p>Android App UI</p>
-                </div>
+                <img src="Pictures/irrig-ui.png" alt="Android App UI">
+                <p class="img-label">Android App UI</p>
               </div>
+
             </div>
             <div class="acc-details">
               <ul>
@@ -270,24 +267,25 @@
         <div class="accordion-body">
           <div class="acc-inner">
             <div class="acc-media">
+
+              <!-- Team Photo — e.g. src="img/nasa-team.jpg" -->
               <div class="img-placeholder">
-                <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="8" stroke="#1FBFFF" stroke-width="2"/><path d="M8 40c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="#1FBFFF" stroke-width="2"/></svg>
-                  <p>Team Photo</p>
-                </div>
+                <img src="Pictures/nasa_team.jpeg" alt="Team Photo">
+                <p class="img-label">Team Photo</p>
               </div>
+
+              <!-- Presentation — e.g. src="img/nasa-presentation.jpg" -->
               <div class="img-placeholder">
-                <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="8" width="36" height="28" rx="2" stroke="#1FBFFF" stroke-width="2"/><line x1="12" y1="16" x2="36" y2="16" stroke="#FFC914" stroke-width="2"/><line x1="12" y1="22" x2="30" y2="22" stroke="#FFC914" stroke-width="2"/><line x1="12" y1="28" x2="24" y2="28" stroke="#FFC914" stroke-width="2"/><rect x="18" y="36" width="12" height="4" stroke="#1FBFFF" stroke-width="1.5"/></svg>
-                  <p>Presentation Slide</p>
-                </div>
+                <img src="" alt="Presentation Slide">
+                <p class="img-label">Presentation Slide</p>
               </div>
+
+              <!-- Rover Progress — e.g. src="img/nasa-rover.jpg" -->
               <div class="img-placeholder">
-                <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="18" width="32" height="20" rx="3" stroke="#1FBFFF" stroke-width="2"/><circle cx="16" cy="40" r="4" stroke="#FFC914" stroke-width="2"/><circle cx="32" cy="40" r="4" stroke="#FFC914" stroke-width="2"/><circle cx="24" cy="12" r="6" stroke="#1FBFFF" stroke-width="2"/></svg>
-                  <p>Rover Progress</p>
-                </div>
+                <img src="" alt="Rover Progress">
+                <p class="img-label">Rover Progress</p>
               </div>
+
             </div>
             <div class="acc-details">
               <ul>
@@ -329,24 +327,25 @@
         <div class="accordion-body">
           <div class="acc-inner">
             <div class="acc-media">
+
+              <!-- Drone Build — e.g. src="img/rtx-drone.jpg" -->
               <div class="img-placeholder">
-                <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><line x1="12" y1="12" x2="36" y2="36" stroke="#1FBFFF" stroke-width="2"/><line x1="36" y1="12" x2="12" y2="36" stroke="#1FBFFF" stroke-width="2"/><circle cx="24" cy="24" r="6" stroke="#FFC914" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="#1FBFFF" stroke-width="2"/><circle cx="36" cy="12" r="4" stroke="#1FBFFF" stroke-width="2"/><circle cx="12" cy="36" r="4" stroke="#1FBFFF" stroke-width="2"/><circle cx="36" cy="36" r="4" stroke="#1FBFFF" stroke-width="2"/></svg>
-                  <p>Drone Build</p>
-                </div>
+                <img src="Pictures/drone.jpeg" alt="Drone Build">
+                <p class="img-label">Drone Build</p>
               </div>
+
+              <!-- Aruco Demo — e.g. src="img/rtx-aruco.jpg" -->
               <div class="img-placeholder">
-                <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="10" width="28" height="28" stroke="#1FBFFF" stroke-width="2"/><rect x="14" y="14" width="8" height="8" fill="#FFC914" opacity="0.5"/><rect x="26" y="14" width="8" height="8" stroke="#FFC914" stroke-width="1.5"/><rect x="14" y="26" width="8" height="8" stroke="#FFC914" stroke-width="1.5"/><rect x="22" y="22" width="4" height="4" fill="#FFC914"/></svg>
-                  <p>Aruco Marker Demo</p>
-                </div>
+                <img src="" alt="Aruco Marker Demo">
+                <p class="img-label">Aruco Marker Demo</p>
               </div>
+
+              <!-- Milling — e.g. src="img/rtx-milling.jpg" -->
               <div class="img-placeholder">
-                <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="20" width="32" height="16" rx="2" stroke="#1FBFFF" stroke-width="2"/><rect x="18" y="12" width="12" height="10" rx="1" stroke="#FFC914" stroke-width="2"/><circle cx="16" cy="36" r="2" fill="#FFC914"/><circle cx="32" cy="36" r="2" fill="#FFC914"/></svg>
-                  <p>Milling Work</p>
-                </div>
+                <img src="" alt="Milling Work">
+                <p class="img-label">Milling Work</p>
               </div>
+
             </div>
             <div class="acc-details">
               <div class="achievement-badge">🥉 Third Place — University</div>
@@ -384,18 +383,19 @@
         <div class="accordion-body">
           <div class="acc-inner">
             <div class="acc-media">
+
+              <!-- Booking UI — e.g. src="img/tutoring-ui.jpg" -->
               <div class="img-placeholder">
-                <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="8" width="36" height="32" rx="3" stroke="#1FBFFF" stroke-width="2"/><line x1="6" y1="18" x2="42" y2="18" stroke="#FFC914" stroke-width="2"/><rect x="12" y="24" width="8" height="6" rx="1" stroke="#FFC914" stroke-width="1.5"/><rect x="26" y="24" width="8" height="6" rx="1" stroke="#FFC914" stroke-width="1.5"/></svg>
-                  <p>Booking System UI</p>
-                </div>
+                <img src="" alt="Booking System UI">
+                <p class="img-label">Booking System UI</p>
               </div>
+
+              <!-- DB Schema — e.g. src="img/tutoring-db.jpg" -->
               <div class="img-placeholder">
-                <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="20" rx="12" ry="8" stroke="#1FBFFF" stroke-width="2"/><path d="M12 20c0 8 24 8 24 0" stroke="#FFC914" stroke-width="2"/><line x1="24" y1="28" x2="24" y2="38" stroke="#FFC914" stroke-width="2"/><line x1="16" y1="38" x2="32" y2="38" stroke="#FFC914" stroke-width="2"/></svg>
-                  <p>Database Schema</p>
-                </div>
+                <img src="" alt="Database Schema">
+                <p class="img-label">Database Schema</p>
               </div>
+
             </div>
             <div class="acc-details">
               <ul>
@@ -423,7 +423,6 @@
           <h2 class="section-title reveal">Awards &amp; Scholarships</h2>
         </div>
       </div>
-
       <div class="award-card tech-frame reveal">
         <div class="award-left">
           <span class="award-id">[AWD-001]</span>
@@ -444,11 +443,10 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- VOLUNTEERING — horizontal scroll strip (from Stitch) -->
+  <!-- VOLUNTEERING -->
   <section class="section section-dark" id="volunteering">
     <div class="container">
       <div class="section-heading-row">
@@ -459,19 +457,17 @@
         <span class="section-enc-tag">SWIPE TO SCAN →</span>
       </div>
     </div>
-    <!-- Full-bleed scroll strip -->
     <div class="vol-scroll-wrap">
       <div class="vol-strip">
 
         <div class="vol-card tech-frame">
           <div class="vol-img-wrap">
-            <!-- PLACEHOLDER: Add a photo of the SPROUTING program -->
-            <div class="vol-img-placeholder">
-              <span>🌱</span>
-            </div>
-            <div class="vol-card-overlay">
-              <span>[TEACHING_ASSISTANT]</span>
-            </div>
+            <!--
+              SPROUTING PHOTO — e.g. src="img/sprouting.jpg"
+              Replace the div below with: <img src="" alt="SPROUTING program">
+            -->
+            <div class="vol-img-placeholder"><span>🌱</span></div>
+            <div class="vol-card-overlay"><span>[TEACHING_ASSISTANT]</span></div>
           </div>
           <h3>Teaching Assistant — SPROUTING</h3>
           <p>University of Puerto Rico Mayagüez</p>
@@ -479,13 +475,12 @@
 
         <div class="vol-card tech-frame">
           <div class="vol-img-wrap">
-            <!-- PLACEHOLDER: Add a photo of the Math Olympics -->
-            <div class="vol-img-placeholder">
-              <span>📐</span>
-            </div>
-            <div class="vol-card-overlay">
-              <span>[MATH_OLYMPICS]</span>
-            </div>
+            <!--
+              MATH OLYMPICS PHOTO — e.g. src="img/math-olympics.jpg"
+              Replace the div below with: <img src="" alt="Math Olympics">
+            -->
+            <div class="vol-img-placeholder"><span>📐</span></div>
+            <div class="vol-card-overlay"><span>[MATH_OLYMPICS]</span></div>
           </div>
           <h3>Math Olympics Assistant</h3>
           <p>Supporting students in competitive mathematics</p>

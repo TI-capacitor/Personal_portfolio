@@ -707,12 +707,27 @@ ul { list-style: none; padding: 0; }
   background: var(--cyan-dim);
 }
 
-.img-placeholder img {
+/* When src is filled in, image fills the slot */
+.img-placeholder img[src]:not([src=""]) {
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: absolute;
   inset: 0;
+}
+
+/* Empty src — hide broken icon, show label underneath */
+.img-placeholder img[src=""] {
+  display: none;
+}
+
+.img-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--gray-muted);
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 0.5rem;
 }
 
 .img-ph-inner {
