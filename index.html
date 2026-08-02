@@ -6,10 +6,13 @@
   <title>Daniel Barreiro Torres | Engineering Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Noise overlay (from Stitch) -->
+  <div class="noise-overlay" aria-hidden="true"></div>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
@@ -18,6 +21,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#awards">Awards</a></li>
       <li><a href="#volunteering">Volunteering</a></li>
     </ul>
     <a href="./docs/Daniel_Resume_DEF.pdf" class="btn-nav">Resume ↗</a>
@@ -32,6 +36,7 @@
       <li><a href="#about" class="mm-link">About</a></li>
       <li><a href="#projects" class="mm-link">Projects</a></li>
       <li><a href="#experience" class="mm-link">Experience</a></li>
+      <li><a href="#awards" class="mm-link">Awards</a></li>
       <li><a href="#volunteering" class="mm-link">Volunteering</a></li>
       <li><a href="./docs/Daniel_Resume_DEF.pdf" class="mm-link">Resume ↗</a></li>
     </ul>
@@ -39,35 +44,16 @@
 
   <!-- HERO -->
   <header class="hero" id="home">
-    <div class="hero-bg">
-      <!-- Circuit board SVG texture -->
-      <svg class="circuit-svg" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-        <g stroke="#E4572E" stroke-width="1" fill="none" opacity="0.13">
-          <line x1="0" y1="80" x2="200" y2="80"/><circle cx="200" cy="80" r="4"/>
-          <line x1="200" y1="80" x2="200" y2="160"/><circle cx="200" cy="160" r="4"/>
-          <line x1="200" y1="160" x2="400" y2="160"/>
-          <line x1="400" y1="160" x2="400" y2="40"/><circle cx="400" cy="40" r="4"/>
-          <line x1="400" y1="40" x2="600" y2="40"/><circle cx="600" cy="40" r="4"/>
-          <line x1="600" y1="40" x2="600" y2="220"/><circle cx="600" cy="220" r="4"/>
-          <line x1="600" y1="220" x2="800" y2="220"/>
-          <line x1="100" y1="300" x2="300" y2="300"/><circle cx="300" cy="300" r="4"/>
-          <line x1="300" y1="300" x2="300" y2="400"/><circle cx="300" cy="400" r="4"/>
-          <line x1="300" y1="400" x2="500" y2="400"/><circle cx="500" cy="400" r="4"/>
-          <line x1="500" y1="400" x2="500" y2="260"/><circle cx="500" cy="260" r="4"/>
-          <line x1="500" y1="260" x2="700" y2="260"/><circle cx="700" cy="260" r="4"/>
-          <line x1="700" y1="260" x2="700" y2="460"/>
-          <line x1="50" y1="450" x2="250" y2="450"/><circle cx="250" cy="450" r="4"/>
-          <line x1="150" y1="0" x2="150" y2="80"/>
-          <line x1="450" y1="160" x2="450" y2="0"/>
-          <circle cx="150" cy="0" r="4"/>
-          <rect x="380" y="140" width="40" height="40" rx="2"/>
-          <rect x="580" y="200" width="40" height="40" rx="2"/>
-          <rect x="280" y="280" width="40" height="40" rx="2"/>
-        </g>
-      </svg>
-    </div>
+    <!-- Scanning line (from Stitch) -->
+    <div class="scanning-line" aria-hidden="true"></div>
+
 
     <div class="hero-content reveal">
+      <!-- Status badge (from Stitch) -->
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        <span class="status-label">// SYSTEM_ONLINE</span>
+      </div>
       <p class="hero-eyebrow">Computer Engineering Junior</p>
       <h1 class="hero-name">Daniel<br>Barreiro<br>Torres</h1>
       <p class="hero-tagline">Embedded Systems · PCB Design · Hardware Development</p>
@@ -98,30 +84,25 @@
       <span class="section-label">About Me</span>
       <div class="about-grid reveal">
         <div class="about-text">
-          <h2 class="section-title">Engineer at the intersection of hardware & software</h2>
+          <h2 class="section-title">Engineer at the intersection of hardware &amp; software</h2>
           <p>Computer Engineering junior with hands-on experience in embedded systems, PCB design, and hardware development — with a strong secondary foundation in web development (HTML, CSS, JS). I thrive when I can touch both the schematic and the codebase.</p>
-          <p>Currently at UPRM, I'm actively seeking opportunities to apply my skills to real-world challenges where precision engineering meets creative problem-solving.</p>
+          <p>Currently at Inter American University of Puerto Rico Bayamón, I'm actively seeking opportunities to apply my skills to real-world challenges where precision engineering meets creative problem-solving.</p>
           <div class="skill-tags">
-            <span>Embedded C/C++</span>
-            <span>PCB Design</span>
-            <span>KiCad</span>
-            <span>ROS 2</span>
-            <span>OpenCV / Python</span>
-            <span>ESP32 / Arduino</span>
-            <span>Raspberry Pi</span>
-            <span>LiDAR</span>
-            <span>Bluetooth / BLE</span>
-            <span>HTML / CSS / JS</span>
+            <span>/ Embedded C/C++</span>
+            <span>/ PCB Design</span>
+            <span>/ KiCad</span>
+            <span>/ ROS 2</span>
+            <span>/ OpenCV / Python</span>
+            <span>/ ESP32</span>
+            <span>/ Raspberry Pi</span>
+            <span>/ LiDAR</span>
+            <span>/ Bluetooth / BLE</span>
+            <span>/ HTML / CSS / JS</span>
           </div>
         </div>
         <div class="about-photo-wrap">
-          <!-- PLACEHOLDER: Replace src with your headshot photo -->
-          <div class="photo-placeholder">
-            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="40" cy="30" r="18" stroke="#E4572E" stroke-width="2"/>
-              <path d="M10 72c0-16.569 13.431-30 30-30s30 13.431 30 30" stroke="#E4572E" stroke-width="2"/>
-            </svg>
-            <p>Your Photo Here</p>
+          <div class="photo-placeholder tech-frame">
+            <img src="Pictures/pfp.jpeg" alt="Daniel Barreiro Torres" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
           </div>
           <div class="contact-pill">
             <a href="mailto:danielbarreiro014@gmail.com">danielbarreiro014@gmail.com</a>
@@ -134,37 +115,49 @@
   <!-- PROJECTS -->
   <section class="section section-dark" id="projects">
     <div class="container">
-      <span class="section-label light">Projects</span>
-      <h2 class="section-title light reveal">Things I've Built</h2>
+      <div class="section-heading-row">
+        <div>
+          <span class="section-label light">Projects</span>
+          <h2 class="section-title light reveal">Things I've Built</h2>
+        </div>
+        <span class="section-enc-tag">ENCRYPTION: ACTIVE</span>
+      </div>
 
       <!-- PROJECT 1: Autonomous Rover -->
-      <div class="accordion reveal" data-open="false">
+      <div class="accordion reveal tech-frame" data-open="false">
         <button class="accordion-header" aria-expanded="false">
           <div class="acc-left">
+            <span class="acc-id">[PRJ-001]</span>
             <span class="acc-tag">Robotics</span>
             <h3>Autonomous Rover — Eugene v0.2.0</h3>
           </div>
-          <span class="acc-icon">+</span>
+          <div class="acc-right">
+            <span class="acc-status-text">STATUS: LOCKED</span>
+            <span class="acc-icon" aria-hidden="true">
+              <!-- lock SVG -->
+              <svg class="icon-lock" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <svg class="icon-unlock" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+            </span>
+          </div>
         </button>
         <div class="accordion-body">
           <div class="acc-inner">
             <div class="acc-media">
-              <!-- PLACEHOLDER: Add rover photos/screenshots -->
               <div class="img-placeholder">
                 <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="18" width="32" height="20" rx="3" stroke="#E4572E" stroke-width="2"/><circle cx="16" cy="40" r="4" stroke="#FFC914" stroke-width="2"/><circle cx="32" cy="40" r="4" stroke="#FFC914" stroke-width="2"/><rect x="18" y="10" width="12" height="10" rx="2" stroke="#E4572E" stroke-width="2"/><line x1="14" y1="26" x2="34" y2="26" stroke="#FFC914" stroke-width="2"/><line x1="14" y1="30" x2="28" y2="30" stroke="#FFC914" stroke-width="2"/></svg>
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="18" width="32" height="20" rx="3" stroke="#1FBFFF" stroke-width="2"/><circle cx="16" cy="40" r="4" stroke="#FFC914" stroke-width="2"/><circle cx="32" cy="40" r="4" stroke="#FFC914" stroke-width="2"/><rect x="18" y="10" width="12" height="10" rx="2" stroke="#1FBFFF" stroke-width="2"/><line x1="14" y1="26" x2="34" y2="26" stroke="#FFC914" stroke-width="2"/></svg>
                   <p>Rover Photo</p>
                 </div>
               </div>
               <div class="img-placeholder">
                 <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="2" stroke="#E4572E" stroke-width="2"/><polyline points="12,36 18,24 24,30 30,18 36,24" stroke="#FFC914" stroke-width="2" fill="none"/></svg>
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="2" stroke="#1FBFFF" stroke-width="2"/><polyline points="12,36 18,24 24,30 30,18 36,24" stroke="#FFC914" stroke-width="2" fill="none"/></svg>
                   <p>Schematic</p>
                 </div>
               </div>
               <div class="img-placeholder">
                 <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="2" stroke="#E4572E" stroke-width="2"/><line x1="14" y1="18" x2="26" y2="18" stroke="#FFC914" stroke-width="2"/><line x1="14" y1="24" x2="34" y2="24" stroke="#FFC914" stroke-width="2"/><line x1="14" y1="30" x2="22" y2="30" stroke="#FFC914" stroke-width="2"/></svg>
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="2" stroke="#1FBFFF" stroke-width="2"/><line x1="14" y1="18" x2="26" y2="18" stroke="#FFC914" stroke-width="2"/><line x1="14" y1="24" x2="34" y2="24" stroke="#FFC914" stroke-width="2"/><line x1="14" y1="30" x2="22" y2="30" stroke="#FFC914" stroke-width="2"/></svg>
                   <p>Code Snippet</p>
                 </div>
               </div>
@@ -184,39 +177,45 @@
       </div>
 
       <!-- PROJECT 2: Irrigation System -->
-      <div class="accordion reveal" data-open="false">
+      <div class="accordion reveal tech-frame" data-open="false">
         <button class="accordion-header" aria-expanded="false">
           <div class="acc-left">
+            <span class="acc-id">[PRJ-002]</span>
             <span class="acc-tag">PCB Design</span>
             <h3>Automatic Irrigation System</h3>
           </div>
-          <span class="acc-icon">+</span>
+          <div class="acc-right">
+            <span class="acc-status-text">STATUS: LOCKED</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg class="icon-lock" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <svg class="icon-unlock" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+            </span>
+          </div>
         </button>
         <div class="accordion-body">
           <div class="acc-inner">
             <div class="acc-media">
-              <!-- PLACEHOLDER: Add PCB design, gerber renders, and hardware photos -->
               <div class="img-placeholder">
                 <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="2" stroke="#E4572E" stroke-width="2"/><rect x="12" y="12" width="10" height="8" rx="1" stroke="#FFC914" stroke-width="2"/><rect x="26" y="12" width="10" height="8" rx="1" stroke="#FFC914" stroke-width="2"/><line x1="10" y1="28" x2="38" y2="28" stroke="#E4572E" stroke-width="1.5"/><circle cx="16" cy="34" r="3" stroke="#FFC914" stroke-width="2"/><circle cx="32" cy="34" r="3" stroke="#FFC914" stroke-width="2"/></svg>
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="2" stroke="#1FBFFF" stroke-width="2"/><rect x="12" y="12" width="10" height="8" rx="1" stroke="#FFC914" stroke-width="2"/><rect x="26" y="12" width="10" height="8" rx="1" stroke="#FFC914" stroke-width="2"/><line x1="10" y1="28" x2="38" y2="28" stroke="#1FBFFF" stroke-width="1.5"/><circle cx="16" cy="34" r="3" stroke="#FFC914" stroke-width="2"/><circle cx="32" cy="34" r="3" stroke="#FFC914" stroke-width="2"/></svg>
                   <p>PCB Layout</p>
                 </div>
               </div>
               <div class="img-placeholder">
                 <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="#E4572E" stroke-width="2"/><path d="M24 14v4M24 30v4M14 24h4M30 24h4" stroke="#FFC914" stroke-width="2"/><circle cx="24" cy="24" r="5" stroke="#E4572E" stroke-width="2"/></svg>
+                  <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="#1FBFFF" stroke-width="2"/><path d="M24 14v4M24 30v4M14 24h4M30 24h4" stroke="#FFC914" stroke-width="2"/><circle cx="24" cy="24" r="5" stroke="#1FBFFF" stroke-width="2"/></svg>
                   <p>Schematic</p>
                 </div>
               </div>
               <div class="img-placeholder">
                 <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="2" stroke="#E4572E" stroke-width="2"/><path d="M14 22 Q20 14 26 22 T38 22" stroke="#FFC914" stroke-width="2" fill="none"/><line x1="14" y1="30" x2="34" y2="30" stroke="#FFC914" stroke-width="2"/></svg>
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="2" stroke="#1FBFFF" stroke-width="2"/><path d="M14 22 Q20 14 26 22 T38 22" stroke="#FFC914" stroke-width="2" fill="none"/><line x1="14" y1="30" x2="34" y2="30" stroke="#FFC914" stroke-width="2"/></svg>
                   <p>Assembly Photo</p>
                 </div>
               </div>
               <div class="img-placeholder">
                 <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="10" width="40" height="28" rx="3" stroke="#E4572E" stroke-width="2"/><rect x="10" y="16" width="28" height="16" rx="1" stroke="#FFC914" stroke-width="1.5"/><line x1="18" y1="16" x2="18" y2="32" stroke="#FFC914" stroke-width="1"/><line x1="26" y1="16" x2="26" y2="32" stroke="#FFC914" stroke-width="1"/><line x1="10" y1="24" x2="38" y2="24" stroke="#FFC914" stroke-width="1"/></svg>
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="10" width="40" height="28" rx="3" stroke="#1FBFFF" stroke-width="2"/><rect x="10" y="16" width="28" height="16" rx="1" stroke="#FFC914" stroke-width="1.5"/><line x1="18" y1="16" x2="18" y2="32" stroke="#FFC914" stroke-width="1"/><line x1="26" y1="16" x2="26" y2="32" stroke="#FFC914" stroke-width="1"/><line x1="10" y1="24" x2="38" y2="24" stroke="#FFC914" stroke-width="1"/></svg>
                   <p>Android App UI</p>
                 </div>
               </div>
@@ -244,38 +243,48 @@
   <!-- EXPERIENCE -->
   <section class="section" id="experience">
     <div class="container">
-      <span class="section-label">Experience</span>
-      <h2 class="section-title reveal">Where I've Led</h2>
+      <div class="section-heading-row">
+        <div>
+          <span class="section-label">Experience</span>
+          <h2 class="section-title reveal">Where I've Led</h2>
+        </div>
+      </div>
 
       <!-- EXP 1: NASA -->
-      <div class="accordion reveal" data-open="false">
+      <div class="accordion reveal tech-frame" data-open="false">
         <button class="accordion-header" aria-expanded="false">
           <div class="acc-left">
+            <span class="acc-id">[EXP-001]</span>
             <span class="acc-tag highlight">NASA Space Grant PR</span>
             <h3>Programming Team Leader</h3>
             <span class="acc-date">Aug 2025 – Apr 2026</span>
           </div>
-          <span class="acc-icon">+</span>
+          <div class="acc-right">
+            <span class="acc-status-text">STATUS: LOCKED</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg class="icon-lock" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <svg class="icon-unlock" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+            </span>
+          </div>
         </button>
         <div class="accordion-body">
           <div class="acc-inner">
             <div class="acc-media">
-              <!-- PLACEHOLDER: Add team photos, presentations, rover progress shots -->
               <div class="img-placeholder">
                 <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="8" stroke="#E4572E" stroke-width="2"/><path d="M8 40c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="#E4572E" stroke-width="2"/></svg>
+                  <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="8" stroke="#1FBFFF" stroke-width="2"/><path d="M8 40c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="#1FBFFF" stroke-width="2"/></svg>
                   <p>Team Photo</p>
                 </div>
               </div>
               <div class="img-placeholder">
                 <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="8" width="36" height="28" rx="2" stroke="#E4572E" stroke-width="2"/><line x1="12" y1="16" x2="36" y2="16" stroke="#FFC914" stroke-width="2"/><line x1="12" y1="22" x2="30" y2="22" stroke="#FFC914" stroke-width="2"/><line x1="12" y1="28" x2="24" y2="28" stroke="#FFC914" stroke-width="2"/><rect x="18" y="36" width="12" height="4" stroke="#E4572E" stroke-width="1.5"/></svg>
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="8" width="36" height="28" rx="2" stroke="#1FBFFF" stroke-width="2"/><line x1="12" y1="16" x2="36" y2="16" stroke="#FFC914" stroke-width="2"/><line x1="12" y1="22" x2="30" y2="22" stroke="#FFC914" stroke-width="2"/><line x1="12" y1="28" x2="24" y2="28" stroke="#FFC914" stroke-width="2"/><rect x="18" y="36" width="12" height="4" stroke="#1FBFFF" stroke-width="1.5"/></svg>
                   <p>Presentation Slide</p>
                 </div>
               </div>
               <div class="img-placeholder">
                 <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="18" width="32" height="20" rx="3" stroke="#E4572E" stroke-width="2"/><circle cx="16" cy="40" r="4" stroke="#FFC914" stroke-width="2"/><circle cx="32" cy="40" r="4" stroke="#FFC914" stroke-width="2"/><circle cx="24" cy="12" r="6" stroke="#E4572E" stroke-width="2"/></svg>
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="18" width="32" height="20" rx="3" stroke="#1FBFFF" stroke-width="2"/><circle cx="16" cy="40" r="4" stroke="#FFC914" stroke-width="2"/><circle cx="32" cy="40" r="4" stroke="#FFC914" stroke-width="2"/><circle cx="24" cy="12" r="6" stroke="#1FBFFF" stroke-width="2"/></svg>
                   <p>Rover Progress</p>
                 </div>
               </div>
@@ -301,34 +310,40 @@
       </div>
 
       <!-- EXP 2: RTX Drone -->
-      <div class="accordion reveal" data-open="false">
+      <div class="accordion reveal tech-frame" data-open="false">
         <button class="accordion-header" aria-expanded="false">
           <div class="acc-left">
+            <span class="acc-id">[EXP-002]</span>
             <span class="acc-tag">RTX Competition</span>
             <h3>Autonomous Vehicle Competition</h3>
             <span class="acc-date">Jan 2025 – May 2025</span>
           </div>
-          <span class="acc-icon">+</span>
+          <div class="acc-right">
+            <span class="acc-status-text">STATUS: LOCKED</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg class="icon-lock" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <svg class="icon-unlock" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+            </span>
+          </div>
         </button>
         <div class="accordion-body">
           <div class="acc-inner">
             <div class="acc-media">
-              <!-- PLACEHOLDER: Add drone photos, Aruco marker demos, milling work -->
               <div class="img-placeholder">
                 <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><line x1="12" y1="12" x2="36" y2="36" stroke="#E4572E" stroke-width="2"/><line x1="36" y1="12" x2="12" y2="36" stroke="#E4572E" stroke-width="2"/><circle cx="24" cy="24" r="6" stroke="#FFC914" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="#E4572E" stroke-width="2"/><circle cx="36" cy="12" r="4" stroke="#E4572E" stroke-width="2"/><circle cx="12" cy="36" r="4" stroke="#E4572E" stroke-width="2"/><circle cx="36" cy="36" r="4" stroke="#E4572E" stroke-width="2"/></svg>
+                  <svg viewBox="0 0 48 48" fill="none"><line x1="12" y1="12" x2="36" y2="36" stroke="#1FBFFF" stroke-width="2"/><line x1="36" y1="12" x2="12" y2="36" stroke="#1FBFFF" stroke-width="2"/><circle cx="24" cy="24" r="6" stroke="#FFC914" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="#1FBFFF" stroke-width="2"/><circle cx="36" cy="12" r="4" stroke="#1FBFFF" stroke-width="2"/><circle cx="12" cy="36" r="4" stroke="#1FBFFF" stroke-width="2"/><circle cx="36" cy="36" r="4" stroke="#1FBFFF" stroke-width="2"/></svg>
                   <p>Drone Build</p>
                 </div>
               </div>
               <div class="img-placeholder">
                 <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="10" width="28" height="28" stroke="#E4572E" stroke-width="2"/><rect x="14" y="14" width="8" height="8" fill="#FFC914" opacity="0.5"/><rect x="26" y="14" width="8" height="8" stroke="#FFC914" stroke-width="1.5"/><rect x="14" y="26" width="8" height="8" stroke="#FFC914" stroke-width="1.5"/><rect x="22" y="22" width="4" height="4" fill="#FFC914"/></svg>
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="10" width="28" height="28" stroke="#1FBFFF" stroke-width="2"/><rect x="14" y="14" width="8" height="8" fill="#FFC914" opacity="0.5"/><rect x="26" y="14" width="8" height="8" stroke="#FFC914" stroke-width="1.5"/><rect x="14" y="26" width="8" height="8" stroke="#FFC914" stroke-width="1.5"/><rect x="22" y="22" width="4" height="4" fill="#FFC914"/></svg>
                   <p>Aruco Marker Demo</p>
                 </div>
               </div>
               <div class="img-placeholder">
                 <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="20" width="32" height="16" rx="2" stroke="#E4572E" stroke-width="2"/><rect x="18" y="12" width="12" height="10" rx="1" stroke="#FFC914" stroke-width="2"/><circle cx="16" cy="36" r="2" fill="#FFC914"/><circle cx="32" cy="36" r="2" fill="#FFC914"/></svg>
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="20" width="32" height="16" rx="2" stroke="#1FBFFF" stroke-width="2"/><rect x="18" y="12" width="12" height="10" rx="1" stroke="#FFC914" stroke-width="2"/><circle cx="16" cy="36" r="2" fill="#FFC914"/><circle cx="32" cy="36" r="2" fill="#FFC914"/></svg>
                   <p>Milling Work</p>
                 </div>
               </div>
@@ -350,28 +365,34 @@
       </div>
 
       <!-- EXP 3: Tutoring -->
-      <div class="accordion reveal" data-open="false">
+      <div class="accordion reveal tech-frame" data-open="false">
         <button class="accordion-header" aria-expanded="false">
           <div class="acc-left">
+            <span class="acc-id">[EXP-003]</span>
             <span class="acc-tag">Entrepreneurship</span>
-            <h3>Founder & Lead Tutor — Dan Tutoring</h3>
+            <h3>Founder &amp; Lead Tutor — Dan Tutoring</h3>
             <span class="acc-date">Present</span>
           </div>
-          <span class="acc-icon">+</span>
+          <div class="acc-right">
+            <span class="acc-status-text">STATUS: LOCKED</span>
+            <span class="acc-icon" aria-hidden="true">
+              <svg class="icon-lock" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <svg class="icon-unlock" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+            </span>
+          </div>
         </button>
         <div class="accordion-body">
           <div class="acc-inner">
             <div class="acc-media">
-              <!-- PLACEHOLDER: Add screenshots of your appointment system / dashboard -->
               <div class="img-placeholder">
                 <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="8" width="36" height="32" rx="3" stroke="#E4572E" stroke-width="2"/><line x1="6" y1="18" x2="42" y2="18" stroke="#FFC914" stroke-width="2"/><rect x="12" y="24" width="8" height="6" rx="1" stroke="#FFC914" stroke-width="1.5"/><rect x="26" y="24" width="8" height="6" rx="1" stroke="#FFC914" stroke-width="1.5"/></svg>
+                  <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="8" width="36" height="32" rx="3" stroke="#1FBFFF" stroke-width="2"/><line x1="6" y1="18" x2="42" y2="18" stroke="#FFC914" stroke-width="2"/><rect x="12" y="24" width="8" height="6" rx="1" stroke="#FFC914" stroke-width="1.5"/><rect x="26" y="24" width="8" height="6" rx="1" stroke="#FFC914" stroke-width="1.5"/></svg>
                   <p>Booking System UI</p>
                 </div>
               </div>
               <div class="img-placeholder">
                 <div class="img-ph-inner">
-                  <svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="20" rx="12" ry="8" stroke="#E4572E" stroke-width="2"/><path d="M12 20c0 8 24 8 24 0" stroke="#FFC914" stroke-width="2"/><line x1="24" y1="28" x2="24" y2="38" stroke="#FFC914" stroke-width="2"/><line x1="16" y1="38" x2="32" y2="38" stroke="#FFC914" stroke-width="2"/></svg>
+                  <svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="20" rx="12" ry="8" stroke="#1FBFFF" stroke-width="2"/><path d="M12 20c0 8 24 8 24 0" stroke="#FFC914" stroke-width="2"/><line x1="24" y1="28" x2="24" y2="38" stroke="#FFC914" stroke-width="2"/><line x1="16" y1="38" x2="32" y2="38" stroke="#FFC914" stroke-width="2"/></svg>
                   <p>Database Schema</p>
                 </div>
               </div>
@@ -393,22 +414,83 @@
     </div>
   </section>
 
-  <!-- VOLUNTEERING -->
-  <section class="section section-accent" id="volunteering">
+  <!-- AWARDS & SCHOLARSHIPS -->
+  <section class="section section-light" id="awards">
     <div class="container">
-      <span class="section-label">Giving Back</span>
-      <h2 class="section-title reveal">Volunteering</h2>
-      <div class="vol-grid reveal">
-        <div class="vol-card">
-          <div class="vol-icon">🌱</div>
+      <div class="section-heading-row">
+        <div>
+          <span class="section-label">Recognition</span>
+          <h2 class="section-title reveal">Awards &amp; Scholarships</h2>
+        </div>
+      </div>
+
+      <div class="award-card tech-frame reveal">
+        <div class="award-left">
+          <span class="award-id">[AWD-001]</span>
+          <div class="award-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>
+          </div>
+        </div>
+        <div class="award-body">
+          <div class="award-meta">
+            <span class="acc-tag">Scholarship</span>
+            <span class="award-date">// ACTIVE</span>
+          </div>
+          <h3 class="award-title">College of Engineers and Surveyors of Puerto Rico</h3>
+          <p class="award-org">Colegio de Ingenieros y Agrimensores de Puerto Rico (CIAPR)</p>
+          <p class="award-desc">Merit-based scholarship awarded by the professional engineering body of Puerto Rico, recognizing academic excellence and commitment to the engineering field.</p>
+          <div class="acc-badges" style="margin-top:1rem; margin-bottom:0;">
+            <span>Merit-Based</span><span>Engineering Excellence</span><span>CIAPR</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VOLUNTEERING — horizontal scroll strip (from Stitch) -->
+  <section class="section section-dark" id="volunteering">
+    <div class="container">
+      <div class="section-heading-row">
+        <div>
+          <span class="section-label light">Giving Back</span>
+          <h2 class="section-title light reveal">Volunteering</h2>
+        </div>
+        <span class="section-enc-tag">SWIPE TO SCAN →</span>
+      </div>
+    </div>
+    <!-- Full-bleed scroll strip -->
+    <div class="vol-scroll-wrap">
+      <div class="vol-strip">
+
+        <div class="vol-card tech-frame">
+          <div class="vol-img-wrap">
+            <!-- PLACEHOLDER: Add a photo of the SPROUTING program -->
+            <div class="vol-img-placeholder">
+              <span>🌱</span>
+            </div>
+            <div class="vol-card-overlay">
+              <span>[TEACHING_ASSISTANT]</span>
+            </div>
+          </div>
           <h3>Teaching Assistant — SPROUTING</h3>
           <p>University of Puerto Rico Mayagüez</p>
         </div>
-        <div class="vol-card">
-          <div class="vol-icon">📐</div>
+
+        <div class="vol-card tech-frame">
+          <div class="vol-img-wrap">
+            <!-- PLACEHOLDER: Add a photo of the Math Olympics -->
+            <div class="vol-img-placeholder">
+              <span>📐</span>
+            </div>
+            <div class="vol-card-overlay">
+              <span>[MATH_OLYMPICS]</span>
+            </div>
+          </div>
           <h3>Math Olympics Assistant</h3>
           <p>Supporting students in competitive mathematics</p>
         </div>
+
       </div>
     </div>
   </section>
@@ -416,13 +498,18 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
-      <span class="footer-logo">DBT</span>
-      <div class="footer-links">
-        <a href="mailto:danielbarreiro014@gmail.com">danielbarreiro014@gmail.com</a>
-        <a href="https://github.com/TI-capacitor" target="_blank">GitHub</a>
-        <a href="./docs/Daniel_Resume_DEF.pdf" target="_blank">Resume</a>
+      <div>
+        <span class="footer-logo">DANIEL BARREIRO TORRES // CORE_ID</span>
+        <p class="footer-sub">Engineering solutions where hardware meets code.</p>
       </div>
-      <p class="footer-copy">© 2026 Daniel Barreiro Torres</p>
+      <div class="footer-links">
+        <a href="mailto:danielbarreiro014@gmail.com">&lt; EMAIL &gt;</a>
+        <a href="https://github.com/TI-capacitor" target="_blank">&lt; GITHUB &gt;</a>
+        <a href="./docs/Daniel_Resume_DEF.pdf" target="_blank">&lt; RESUME &gt;</a>
+      </div>
+    </div>
+    <div class="container">
+      <p class="footer-copy">© 2026 Daniel Barreiro Torres // ALL_RIGHTS_RESERVED</p>
     </div>
   </footer>
 
