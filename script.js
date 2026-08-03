@@ -1,5 +1,5 @@
 /* =========================================
-   script.js — Interactions
+   script.js
    ========================================= */
 
 // ---- Hamburger / Mobile Menu ----
@@ -22,29 +22,33 @@ hamburger.addEventListener('click', () => {
 document.querySelectorAll('.mm-link').forEach(link => {
   link.addEventListener('click', () => {
     mobileMenu.classList.remove('open');
-    hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    hamburger.querySelectorAll('span').forEach(s => {
+      s.style.transform = ''; s.style.opacity = '';
+    });
   });
 });
 
-// ---- Accordion with lock/unlock toggle (from Stitch) ----
+// ---- Accordion with Watch Dogs diamond ----
 document.querySelectorAll('.accordion-header').forEach(header => {
   header.addEventListener('click', () => {
     const accordion = header.closest('.accordion');
     const isOpen = accordion.classList.toggle('open');
     header.setAttribute('aria-expanded', isOpen);
 
-    // Swap lock icons
-    const lockIcon   = header.querySelector('.icon-lock');
-    const unlockIcon = header.querySelector('.icon-unlock');
+    // Status text swap
     const statusText = header.querySelector('.acc-status-text');
-
-    if (lockIcon && unlockIcon) {
-      lockIcon.style.display   = isOpen ? 'none'  : 'block';
-      unlockIcon.style.display = isOpen ? 'block' : 'none';
+    if (statusText) {
+      statusText.textContent = isOpen ? 'STATUS: ACCESSED' : 'STATUS: LOCKED';
     }
 
-    if (statusText) {
-      statusText.textContent = isOpen ? 'STATUS: OPEN' : 'STATUS: LOCKED';
+    // Diamond trace: reset then re-trigger so animation replays each open
+    const trace = header.querySelector('.diamond-trace');
+    if (trace && isOpen) {
+      // Force reflow to restart the CSS transition
+      trace.style.transition = 'none';
+      trace.style.strokeDashoffset = '62';
+      trace.getBoundingClientRect(); // flush
+      trace.style.transition = '';  // restore — CSS takes over
     }
   });
 });
@@ -72,13 +76,3 @@ window.addEventListener('scroll', () => {
     ? '0 4px 24px rgba(0,0,0,0.5)'
     : 'none';
 }, { passive: true });
-
-// ---- Live clock in nav (optional, from Stitch concept) ----
-// Uncomment to show a live UTC clock in the nav
-// const clockEl = document.createElement('span');
-// clockEl.className = 'nav-clock';
-// clockEl.style.cssText = 'font-family:var(--font-mono);font-size:0.72rem;color:rgba(255,255,255,0.3);letter-spacing:0.1em;';
-// document.querySelector('.nav').insertBefore(clockEl, document.querySelector('.btn-nav'));
-// setInterval(() => {
-//   clockEl.textContent = new Date().toISOString().slice(11,19) + '_UTC';
-// }, 1000);

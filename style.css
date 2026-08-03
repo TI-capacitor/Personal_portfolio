@@ -48,29 +48,17 @@ body {
   color: var(--gray-text);
   background: var(--surface);
   overflow-x: hidden;
-  /* Subtle grid — feels like a PCB substrate */
   background-image:
     linear-gradient(rgba(31, 191, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(31, 191, 255, 0.03) 1px, transparent 1px);
   background-size: 32px 32px;
-  background-attachment: fixed;
 }
 
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; padding: 0; }
 
-/* =========================================
-   NOISE OVERLAY
-   ========================================= */
-.noise-overlay {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.045;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
+/* Noise overlay removed — was causing flicker on desktop */
 
 /* =========================================
    TECH FRAME — corner brackets, cyan structural color
@@ -649,17 +637,50 @@ ul { list-style: none; padding: 0; }
   display: none;
 }
 
-/* Lock icon — cyan; unlocked transitions to yellow */
+/* ---- Watch Dogs diamond hack icon ---- */
 .acc-icon {
-  color: var(--cyan);
   display: flex;
   align-items: center;
-  transition: transform var(--transition), color var(--transition);
+  flex-shrink: 0;
 }
 
-.accordion.open .acc-icon {
+.hack-diamond {
+  display: block;
+}
+
+/* Idle diamond — dim cyan outline */
+.diamond-shape {
+  stroke: rgba(31, 191, 255, 0.35);
+  transition: stroke 0.3s ease;
+}
+
+/* Trace line — hidden until open */
+.diamond-trace {
+  stroke: var(--cyan);
+  stroke-dasharray: 68;
+  stroke-dashoffset: 68;
+  transition: none;
+}
+
+/* On hover — hint: diamond brightens */
+.accordion-header:hover .diamond-shape {
+  stroke: rgba(31, 191, 255, 0.7);
+}
+
+/* On open — trace races around the diamond, then stays full */
+.accordion.open .diamond-shape {
+  stroke: var(--yellow);
+}
+
+.accordion.open .diamond-trace {
+  stroke: var(--yellow);
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Status text color shift on open */
+.accordion.open .acc-status-text {
   color: var(--yellow);
-  transform: rotate(10deg);
 }
 
 /* Accordion body */
