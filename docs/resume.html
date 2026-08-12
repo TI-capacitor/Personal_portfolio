@@ -9,55 +9,48 @@
 
     body {
       font-family: 'Times New Roman', Times, serif;
-      font-size: 11pt;
+      font-size: 10.5pt;
       color: #000;
       background: #fff;
       width: 8.5in;
       margin: 0 auto;
-      padding: 0.5in 0.65in;
-      line-height: 1.25;
+      padding: 0.4in 0.6in;
+      line-height: 1.2;
     }
 
-    /* ---- HEADER ---- */
     .name {
       text-align: center;
-      font-size: 14pt;
+      font-size: 13.5pt;
       font-weight: bold;
-      margin-bottom: 2pt;
+      margin-bottom: 1.5pt;
     }
 
     .contact {
       text-align: center;
-      font-size: 10.5pt;
-      margin-bottom: 6pt;
+      font-size: 10pt;
+      margin-bottom: 4pt;
     }
 
     .contact a { color: #000; text-decoration: none; }
 
-    /* ---- SECTION HEADING ---- */
-    /* Matches the template: bold uppercase text, full-width rule below */
     .sec-head {
-      font-size: 11pt;
+      font-size: 10.5pt;
       font-weight: bold;
       text-transform: uppercase;
-      border-bottom: 1pt solid #000;
-      margin-top: 7pt;
-      margin-bottom: 3pt;
+      border-bottom: 0.75pt solid #000;
+      margin-top: 5pt;
+      margin-bottom: 2pt;
       padding-bottom: 1pt;
     }
 
-    /* ---- SKILLS ---- */
-    /* Plain text lines, label bolded, colon, values */
     .skill-line {
-      font-size: 10.5pt;
-      margin-bottom: 1pt;
+      font-size: 10pt;
+      margin-bottom: 0.5pt;
     }
 
     .skill-line b { font-weight: bold; }
 
-    /* ---- ENTRY HEADER: Title right-aligned date, org below ---- */
-    /* Matches template exactly: bold title + date on same line, italic org below */
-    .entry { margin-bottom: 5pt; }
+    .entry { margin-bottom: 3.5pt; }
 
     .entry-top {
       display: flex;
@@ -65,80 +58,52 @@
       align-items: baseline;
     }
 
-    .entry-title {
-      font-weight: bold;
-      font-size: 11pt;
-    }
+    .entry-title { font-weight: bold; font-size: 10.5pt; }
+    .entry-date  { font-size: 10.5pt; font-weight: normal; white-space: nowrap; padding-left: 6pt; }
+    .entry-org   { font-style: italic; font-size: 10pt; margin-bottom: 0.5pt; }
 
-    .entry-date {
-      font-size: 11pt;
-      font-weight: normal;
-    }
-
-    .entry-org {
-      font-style: italic;
-      font-size: 10.5pt;
-      margin-bottom: 1pt;
-    }
-
-    /* Project line: bold title left, plain link right */
     .proj-top {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
     }
 
-    .proj-link {
-      font-size: 10.5pt;
-      color: #000;
-      text-decoration: none;
-    }
+    .proj-link { font-size: 10pt; color: #000; text-decoration: none; }
 
-    /* ---- BULLETS ---- */
-    ul {
-      padding-left: 16pt;
-      margin-top: 1pt;
-    }
+    ul { padding-left: 14pt; margin-top: 0.5pt; }
 
-    li {
-      font-size: 10.5pt;
-      margin-bottom: 1.5pt;
-      line-height: 1.3;
-    }
+    li { font-size: 10pt; margin-bottom: 1pt; line-height: 1.2; }
 
-    /* ---- EDUCATION lines: bold school–degree, date right ---- */
     .edu-line {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 10.5pt;
-      margin-bottom: 1.5pt;
+      font-size: 10pt;
+      margin-bottom: 1pt;
     }
 
     .edu-line .left { font-weight: bold; }
     .edu-line .right { white-space: nowrap; padding-left: 6pt; }
 
-    /* ---- CERT / VOLUNTEER simple rows ---- */
     .plain-line {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 10.5pt;
-      margin-bottom: 1.5pt;
+      font-size: 10pt;
+      margin-bottom: 1pt;
     }
 
     .plain-line .left  { font-weight: bold; }
     .plain-line .right { font-style: italic; white-space: nowrap; padding-left: 6pt; }
 
     @media print {
-      body { padding: 0.5in 0.65in; }
+      body { padding: 0.4in 0.6in; }
       @page { size: letter; margin: 0; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAME -->
   <div class="name">Daniel Barreiro Torres</div>
   <div class="contact">
     danielbarreiro014@gmail.com &nbsp;|&nbsp;
@@ -147,14 +112,11 @@
     Bayamón, Puerto Rico
   </div>
 
-  <!-- SKILLS -->
   <div class="sec-head">Skills</div>
-  <div class="skill-line"><b>Embedded / Hardware:</b> Embedded C/C++, ESP32, Arduino, Raspberry Pi, H-bridge (L298N), servo control, LiDAR, SPI / I2C / UART</div>
-  <div class="skill-line"><b>PCB Design:</b> KiCad, EasyEDA, Gerber / BOM generation, signal integrity, power design, battery charging circuits</div>
+  <div class="skill-line"><b>Hardware & Networking:</b> Embedded C/C++, Network Infrastructure, ESP32, Microcontrollers, (Atmega328P & ESP32), Arduino, Raspberry Pi, PCB design (KiCad, EasyEDA)</div>
   <div class="skill-line"><b>Robotics / Software:</b> ROS 2 Jazzy, Gazebo Harmonic, OpenCV, ArUco markers, colcon, ament_cmake, Python</div>
-  <div class="skill-line"><b>Tools:</b> Git, Linux / Bash, VS Code, Arduino IDE, Simulink, HTML / CSS / JS</div>
+  <div class="skill-line"><b>Software Tools:</b> Git, Linux / Bash, VS Code, Arduino IDE, Simulink, HTML / CSS / JS, AutoCAD</div>
 
-  <!-- EXPERIENCE -->
   <div class="sec-head">Experience</div>
 
   <div class="entry">
@@ -166,7 +128,7 @@
     <ul>
       <li>Revived a near-stalled software subteam by authoring a 3-phase Emergency Plan (Hardware Validation → Manual Override → Autonomy), advancing the project to a credible prototype before the May 2026 deadline.</li>
       <li>Raised active team participation from ~22% to 100% by restructuring tasks around clear technical deliverables and building a collaborative engineering culture.</li>
-      <li>Architected a dual-MCU embedded system — ESP32 (SPI slave, real-time actuation) and Raspberry Pi (SPI master, autonomy and vision) — and validated ROS 2 Jazzy, Gazebo Harmonic, and a DualShock 4 Bluetooth manual override.</li>
+      <li>Architected a dual-MCU system — ESP32 (SPI slave, real-time actuation) and Raspberry Pi (SPI master, autonomy and vision) — and validated ROS 2 Jazzy, Gazebo Harmonic, and a DualShock 4 Bluetooth manual override.</li>
       <li>Reduced technical risk by pivoting from full SLAM to ArUco + OpenCV vision navigation, producing a stronger funding argument that helped secure sponsorship for the 2027 competition.</li>
     </ul>
   </div>
@@ -205,7 +167,6 @@
     </ul>
   </div>
 
-  <!-- PROJECTS -->
   <div class="sec-head">Projects</div>
 
   <div class="entry">
@@ -228,18 +189,16 @@
     </ul>
   </div>
 
-  <!-- EDUCATION -->
   <div class="sec-head">Education</div>
   <div class="edu-line">
     <span class="left">Inter American University of Puerto Rico — B.S. Computer Engineering, Bayamón Campus</span>
     <span class="right">2022 – Present</span>
   </div>
-  <ul style="margin-top:1pt;">
-    <li>CIAPR Merit Scholarship — awarded by the College of Engineers and Surveyors of Puerto Rico for academic excellence</li>
-    <li>SIICOM member — student chapter of the Colegio de Ingenieros y Agrimensores de Puerto Rico</li>
+  <ul style="margin-top:0.5pt;">
+    <li>Ing. José Romero Villanueva Scholarship — College of Engineers and Surveyors of Puerto Rico (CIAPR)</li>
+    <li>SIICOM member — student chapter, Colegio de Ingenieros y Agrimensores de Puerto Rico</li>
   </ul>
 
-  <!-- CERTIFICATIONS -->
   <div class="sec-head">Certifications</div>
   <div class="plain-line">
     <span class="left">FAA Remote Pilot Certificate — Part 107</span>
@@ -252,21 +211,6 @@
   <div class="plain-line">
     <span class="left">Advancing Your Career — Professional Development</span>
     <span class="right">Boston Scientific Corporation, 2026</span>
-  </div>
-
-  <!-- VOLUNTEERING -->
-  <div class="sec-head">Volunteering &amp; Community</div>
-  <div class="plain-line">
-    <span class="left">Teaching Assistant — SPROUTING Program</span>
-    <span class="right">University of Puerto Rico Mayagüez</span>
-  </div>
-  <div class="plain-line">
-    <span class="left">Math Olympics Assistant</span>
-    <span class="right">IAUPR Bayamón</span>
-  </div>
-  <div class="plain-line">
-    <span class="left">Beach Cleanups &amp; Elderly Outreach Talks</span>
-    <span class="right">Puerto Rico Community Service</span>
   </div>
 
 </body>
