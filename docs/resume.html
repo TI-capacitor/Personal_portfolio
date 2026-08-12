@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Barreiro Torres — Resume</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 12pt;
+      color: #000;
+      background: #fff;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.75in;
+      line-height: 1.35;
+    }
+
+    /* ---- HEADER ---- */
+    .header {
+      text-align: center;
+      margin-bottom: 6pt;
+    }
+
+    .header h1 {
+      font-size: 14pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 3pt;
+    }
+
+    .header .contact {
+      font-size: 11pt;
+    }
+
+    .header .contact a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    /* ---- SECTION ---- */
+    .section {
+      margin-bottom: 8pt;
+    }
+
+    .section-title {
+      font-size: 12pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-bottom: 1pt solid #000;
+      padding-bottom: 1pt;
+      margin-bottom: 5pt;
+      letter-spacing: 0.03em;
+    }
+
+    /* ---- SKILLS ---- */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .skills-table td {
+      padding: 1pt 0;
+      vertical-align: top;
+      font-size: 11pt;
+    }
+
+    .skills-table td:first-child {
+      font-weight: bold;
+      white-space: nowrap;
+      padding-right: 8pt;
+      width: 130pt;
+    }
+
+    /* ---- ENTRIES ---- */
+    .entry {
+      margin-bottom: 6pt;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 6pt;
+    }
+
+    .entry-left { flex: 1; }
+
+    .entry-title {
+      font-weight: bold;
+      font-size: 12pt;
+    }
+
+    .entry-org {
+      font-style: italic;
+      font-size: 12pt;
+    }
+
+    .entry-date {
+      font-size: 11pt;
+      white-space: nowrap;
+      flex-shrink: 0;
+      text-align: right;
+    }
+
+    .entry ul {
+      margin-top: 2pt;
+      padding-left: 16pt;
+    }
+
+    .entry li {
+      font-size: 11pt;
+      margin-bottom: 2pt;
+      line-height: 1.35;
+    }
+
+    /* ---- SIMPLE TWO-COLUMN ROWS (certs, awards) ---- */
+    .two-col {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 6pt;
+      margin-bottom: 3pt;
+      font-size: 11pt;
+    }
+
+    .two-col .left { font-weight: bold; }
+    .two-col .right { font-style: italic; text-align: right; white-space: nowrap; }
+
+    /* ---- PRINT ---- */
+    @media print {
+      body { padding: 0.75in; }
+      @page { size: letter; margin: 0.75in; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAME & CONTACT -->
+  <div class="header">
+    <h1>Daniel Barreiro Torres</h1>
+    <div class="contact">
+      danielbarreiro014@gmail.com &nbsp;|&nbsp;
+      <a href="https://github.com/TI-capacitor">github.com/TI-capacitor</a> &nbsp;|&nbsp;
+      United States of America &nbsp;|&nbsp;
+      <a href="https://www.linkedin.com/in/daniel-barreiro-torres/">linkedin.com/in/daniel-barreiro-torres</a>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <div class="section-title">Skills</div>
+    <table class="skills-table">
+      <tr>
+        <td>Embedded / Hardware:</td>
+        <td>Embedded C/C++, ESP32, Arduino, Raspberry Pi, L298N H-bridge, servo control, LiDAR, SPI / I2C / UART</td>
+      </tr>
+      <tr>
+        <td>PCB Design:</td>
+        <td>KiCad, EasyEDA, Gerber / BOM generation, signal integrity, power design, battery charging circuits</td>
+      </tr>
+      <tr>
+        <td>Robotics / Software:</td>
+        <td>ROS 2 Jazzy, OpenCV, ArUco markers, Python</td>
+      </tr>
+      <tr>
+        <td>Tools &amp; Platforms:</td>
+        <td>Git, Linux / Bash, VS Code, Arduino IDE, Simulink, HTML / CSS / JS</td>
+      </tr>
+      
+    </table>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <div class="section-title">Education</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-left">
+          <span class="entry-title">Inter American University of Puerto Rico</span>
+          — <span class="entry-org">B.S. Computer Engineering, Bayamón Campus</span>
+        </div>
+        <div class="entry-date">2024 – 2028</div>
+      </div>
+      <ul>
+        <li>Ing. José Romero Villanueva Scholarship — awarded by the College of Engineers and Surveyors of Puerto Rico for academic excellence</li>
+        <li>SIICOM member — student chapter of the College of Engineers and Surveyors of Puerto Rico</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">Experience</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-left">
+          <span class="entry-title">Programming Team Leader</span>,
+          <span class="entry-org">NASA Space Grant PR — Lunabotics 2026, IAUPR Bayamón</span>
+        </div>
+        <div class="entry-date">Aug 2025 – Apr 2026</div>
+      </div>
+      <ul>
+        <li>Assumed leadership of a disorganized software subteam under emergency conditions and authored a formal 3-phase Emergency Plan, advancing the project from near-stall to a credible prototype ahead of the May 2026 deadline</li>
+        <li>Grew active team participation from approximately 22% to 100% within one semester by restructuring task assignments around clear technical deliverables and implementing a collaborative engineering culture</li>
+        <li>Architected a dual-MCU embedded system — ESP32 as SPI slave handling real-time actuation (DM542T driver for stepper motors) and Raspberry Pi 5 as SPI master managing camera processing and autonomy logic</li>
+        <li>Delivered validated ROS 2 Jazzy environment, Gazebo Harmonic simulation setup, first C++ ROS 2 package, and Bluetooth gamepad (DualShock 4) manual override scheme, keeping the project on schedule despite limited funding</li>
+        <li>Pivoted autonomy strategy fromto ArUco marker + OpenCV vision navigation, reducing technical risk and producing a stronger funding argument that contributed to securing sponsorship for the 2027 competition</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-left">
+          <span class="entry-title">Autonomous Vehicle Competition — 3rd Place</span>,
+          <span class="entry-org">RTX Competition, IAUPR Bayamón</span>
+        </div>
+        <div class="entry-date">Jan 2025 – May 2025</div>
+      </div>
+      <ul>
+        <li>Developed an OpenCV + Python computer vision pipeline that detected ArUco markers in real time and translated detections into autonomous navigation commands, securing 3rd place out of competing university teams</li>
+        <li>Assembled an amateur drone from components and completed formal FAA Drone Safety certification to meet competition requirements</li>
+        <li>Machined custom aluminum spacers on a milling machine, including threading operations, to meet precision fit tolerances for drone assembly</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-left">
+          <span class="entry-title">Founder &amp; Lead Tutor</span>,
+          <span class="entry-org">Dan Tutoring</span>
+        </div>
+        <div class="entry-date">Aug 2025 – Present</div>
+      </div>
+      <ul>
+        <li>Founded and operate an independent tutoring business serving university engineering students in Calculus, Statics, Pre-Calculus, and C++, growing from a manual scheduling process to a fully automated platform</li>
+        <li>Built a full-stack appointment booking web application from scratch — including a relational database, interactive calendar, reCAPTCHA v3 bot protection, automated email confirmation tokens, and bilingual (EN/ES) UI</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-left">
+          <span class="entry-title">Math &amp; Engineering Tutor</span>,
+          <span class="entry-org">Inter American University of Puerto Rico Bayamón</span>
+        </div>
+        <div class="entry-date">Aug 2024 – May 2025</div>
+      </div>
+      <ul>
+        <li>Tutored students in Calculus I, Pre-Calculus, Mechanics Statics, and introductory C++ programming across individual and small-group sessions</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section">
+    <div class="section-title">Projects</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-left">
+          <span class="entry-title">Autonomous Rover — Eugene v0.2.0</span>
+        </div>
+        <div class="entry-date">2024 – 2025</div>
+      </div>
+      <ul>
+        <li>Designed and implemented OOP embedded firmware from scratch — separate <em>Command</em> and <em>Movement</em> classes with serial command parsing, typecast normalization, and dual-channel H-bridge PWM motor control (L298N driver)</li>
+        <li>Structured firmware into modular header files (Eugene.h / Eugene.cpp) to enable clean subsystem separation; rover served as the physical hardware prototype for the NASA Lunabotics project</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-left">
+          <span class="entry-title">Automatic Irrigation System</span> &nbsp;
+          <a href="https://github.com/TI-capacitor/Embedded_Irrigation_system" style="color:#000; font-size:11pt;">github.com/TI-capacitor/Embedded_Irrigation_system</a>
+        </div>
+        <div class="entry-date">2024</div>
+      </div>
+      <ul>
+        <li>Designed a custom 2-layer PCB in KiCad with deliberate noise mitigation and parasitic inductance management; closed-loop moisture sensor feedback drives solenoid valve control for autonomous home crop irrigation</li>
+        <li>Added Bluetooth Android control app and on-board battery charging circuit for remote off-grid deployment; Gerber files and BOM published on GitHub</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section">
+    <div class="section-title">Certifications</div>
+
+    <div class="two-col">
+      <div class="left">FAA Remote Pilot Certificate — Part 107</div>
+      <div class="right">Federal Aviation Administration</div>
+    </div>
+    <div class="two-col">
+      <div class="left">Cisco Certified Support Technician (CCST)</div>
+      <div class="right">Cisco — In Progress</div>
+    </div>
+    <div class="two-col">
+      <div class="left">Advancing Your Career — Professional Development</div>
+      <div class="right">Boston Scientific Corporation, 2026</div>
+    </div>
+  </div>
+
+  <!-- VOLUNTEERING -->
+  <div class="section">
+    <div class="section-title">Volunteering &amp; Community</div>
+
+    <div class="two-col">
+      <div class="left">Teaching Assistant — SPROUTING Program</div>
+      <div class="right">University of Puerto Rico Mayagüez</div>
+    </div>
+    <div class="two-col">
+      <div class="left">Math Olympics Assistant</div>
+      <div class="right">Inter American University of Puerto Rico Bayamón</div>
+    </div>
+    <div class="two-col">
+      <div class="left">Beach Cleanups &amp; Elderly Outreach Talks</div>
+      <div class="right">Puerto Rico Community Service</div>
+    </div>
+  </div>
+
+</body>
+</html>
