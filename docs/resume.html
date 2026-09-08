@@ -15,7 +15,7 @@
       width: 8.5in;
       margin: 0 auto;
       padding: 0.5in;
-      line-height: 1.15;
+      line-height: 1.1;
     }
 
     .name {
@@ -55,14 +55,14 @@
       font-weight: bold;
       text-transform: uppercase;
       border-bottom: 0.75pt solid #000;
-      margin-top: 5pt;
-      margin-bottom: 2pt;
-      padding-bottom: 1pt;
+      margin-top: 4pt;
+      margin-bottom: 1.5pt;
+      padding-bottom: 0.5pt;
     }
 
     .skill-line { font-size: 10pt; margin-bottom: 0.5pt; }
 
-    .entry { margin-bottom: 3pt; }
+    .entry { margin-bottom: 2.5pt; page-break-inside: avoid; }
 
     .entry-top {
       display: flex;
@@ -74,8 +74,8 @@
     .entry-date  { font-size: 10pt; font-weight: normal; white-space: nowrap; padding-left: 6pt; }
     .entry-org   { font-style: italic; font-size: 10pt; margin-bottom: 0.5pt; }
 
-    ul { padding-left: 13pt; margin-top: 0.5pt; }
-    li { font-size: 10pt; margin-bottom: 0.5pt; line-height: 1.15; }
+    ul { padding-left: 12pt; margin-top: 0.5pt; }
+    li { font-size: 10pt; margin-bottom: 0.3pt; line-height: 1.1; orphans: 2; widows: 2; }
 
     .plain-line {
       display: flex;
@@ -89,9 +89,10 @@
     .plain-line .right { font-style: italic; white-space: nowrap; padding-left: 6pt; }
 
     @media print {
-      body { padding: 0.5in; width: auto; }
       @page { size: letter; margin: 0; }
+      body { padding: 0.5in; width: auto; margin: 0; }
       .placeholder { color: #000; font-weight: normal; }
+      a { color: #000; text-decoration: none; }
     }
   </style>
 </head>
@@ -105,12 +106,6 @@
     <a href="tel:+19394604198">(939) 460-4198</a> &nbsp;|&nbsp;
     <a href="https://www.linkedin.com/in/daniel-barreiro-torres">linkedin.com/in/daniel-barreiro-torres</a> &nbsp;|&nbsp;
     <a href="https://github.com/TI-capacitor">github.com/TI-capacitor</a>
-  </div>
-
-  <div class="summary">
-    Computer engineering student (B.S. expected 2028) building autonomous systems in C/C++, Python, and ROS 2 across
-    embedded hardware, computer vision, and PCB design. Led the software subteam for a NASA Space Grant Lunabotics
-    robot and placed 3rd in an RTX/Collins Aerospace autonomous vehicle competition.
   </div>
 
   <div class="sec-head">Technical Skills</div>
@@ -127,7 +122,7 @@
     </div>
     <div class="entry-org">Inter American University of Puerto Rico, Bayamón</div>
     <ul>
-      <li>Revived a stalled 4</span>-member software subteam by authoring a 3-phase strategy plan, moving the project from no working prototype to a demoed autonomous system 12 weeks before the competition deadline.</li>
+      <li>Revived a stalled 4-member software subteam by authoring a 3-phase strategy plan, moving the project from no working prototype to a demoed autonomous system 12 weeks before the competition deadline.</li>
       <li>Architected a dual-MCU control system pairing an ESP32 (SPI slave, real-time motor control) with a Raspberry Pi (SPI master, autonomy and vision) on ROS 2 Jazzy, with a manual override failsafe.</li>
       <li>Rebuilt the navigation stack around ArUco marker detection in OpenCV, cutting technical risk in the design that won sponsorship funding for the team's 2027–2028 competition cycle.</li>
     </ul>
@@ -196,7 +191,7 @@
   <div class="entry">
     <div class="entry-top">
       <span class="entry-title">QR Code Generator — Python Desktop App</span>
-      <span class="entry-date"><span class="placeholder">Aug</span> 2026 – Present</span>
+      <span class="entry-date">Aug 2026 – Present</span>
     </div>
     <ul>
       <li>Built a desktop QR code generator in Python, refactoring a console script into separate GUI and QR classes and replacing manual path entry with a Tkinter file dialog.</li>
@@ -226,16 +221,11 @@
     <span class="left">OSHA 30-Hour Construction Outreach Training</span>
     <span class="right">OSHA, 2023</span>
   </div>
-  <!-- <div class="plain-line">
-    <span class="left">Advancing Your Career — Professional Development</span>
-    <span class="right">Boston Scientific Corporation, 2026</span>
-  </div> -->
 
   <div class="plain-line">
     <span class="left">FAA Remote Pilot Certificate — Part 107</span>
     <span class="right">Federal Aviation Administration (FAA)</span>
   </div>
- 
 
 </body>
 </html>
