@@ -9,52 +9,46 @@
 
     body {
       font-family: 'Times New Roman', Times, serif;
-      font-size: 10.5pt;
+      font-size: 10pt;
       color: #000;
       background: #fff;
       width: 8.5in;
       margin: 0 auto;
-      padding: 0.4in 0.6in;
-      line-height: 1.2;
+      padding: 0.5in;
+      line-height: 1.15;
     }
 
     .name {
       text-align: center;
-      font-size: 13.5pt;
+      font-size: 15pt;
       font-weight: bold;
+      letter-spacing: 0.3pt;
       margin-bottom: 1.5pt;
     }
 
     .profession {
       text-align: center;
-      font-size: 11pt;
-      font-style: italic;
+      font-size: 10.5pt;
+      font-weight: bold;
       margin-bottom: 2pt;
-      font-weight:bold;
-    }
-
-    .objective {
-      text-align: center;
-      font-size: 9.5pt;
-      margin-bottom: 4pt;
-      color: #333;
     }
 
     .contact {
       text-align: center;
       font-size: 10pt;
-      margin-bottom: 4pt;
+      margin-bottom: 3pt;
     }
 
-    .contact a {
-      color: #0b57d0;
-      text-decoration: underline;
+    .contact a { color: #000; text-decoration: none; }
+
+    .summary {
+      font-size: 10pt;
+      text-align: justify;
+      margin-bottom: 2pt;
     }
 
-    .placeholder {
-      color: #c0392b;
-      font-weight: bold;
-    }
+    /* Fill these in / verify before exporting the PDF. Delete the class, not the text. */
+    .placeholder { color: #c0392b; font-weight: bold; }
 
     .sec-head {
       font-size: 10.5pt;
@@ -66,14 +60,9 @@
       padding-bottom: 1pt;
     }
 
-    .skill-line {
-      font-size: 10pt;
-      margin-bottom: 0.5pt;
-    }
+    .skill-line { font-size: 10pt; margin-bottom: 0.5pt; }
 
-    .skill-line b { font-weight: bold; }
-
-    .entry { margin-bottom: 3.5pt; }
+    .entry { margin-bottom: 3pt; }
 
     .entry-top {
       display: flex;
@@ -81,32 +70,12 @@
       align-items: baseline;
     }
 
-    .entry-title { font-weight: bold; font-size: 10.5pt; }
-    .entry-date  { font-size: 10.5pt; font-weight: normal; white-space: nowrap; padding-left: 6pt; }
+    .entry-title { font-weight: bold; font-size: 10pt; }
+    .entry-date  { font-size: 10pt; font-weight: normal; white-space: nowrap; padding-left: 6pt; }
     .entry-org   { font-style: italic; font-size: 10pt; margin-bottom: 0.5pt; }
 
-    .proj-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-
-    .proj-link { font-size: 10pt; color: #0b57d0; text-decoration: underline; }
-
-    ul { padding-left: 14pt; margin-top: 0.5pt; }
-
-    li { font-size: 10pt; margin-bottom: 1pt; line-height: 1.2; }
-
-    .edu-line {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      font-size: 10pt;
-      margin-bottom: 1pt;
-    }
-
-    .edu-line .left { font-weight: bold; }
-    .edu-line .right { white-space: nowrap; padding-left: 6pt; }
+    ul { padding-left: 13pt; margin-top: 0.5pt; }
+    li { font-size: 10pt; margin-bottom: 0.5pt; line-height: 1.15; }
 
     .plain-line {
       display: flex;
@@ -120,8 +89,9 @@
     .plain-line .right { font-style: italic; white-space: nowrap; padding-left: 6pt; }
 
     @media print {
-      body { padding: 0.4in 0.6in; }
+      body { padding: 0.5in; width: auto; }
       @page { size: letter; margin: 0; }
+      .placeholder { color: #000; font-weight: normal; }
     }
   </style>
 </head>
@@ -130,17 +100,23 @@
   <div class="name">Daniel Barreiro Torres</div>
   <div class="profession">Computer Engineering Student — Embedded Systems &amp; Robotics</div>
   <div class="contact">
-    <span class="placeholder"><a href="mailto:danielbarreiro014@gmail.com">danielbarreiro014@gmail.com</a></span> &nbsp;|&nbsp;
-    <span class="placeholder"><a href="tel:9394604198">(939) 460-4198</a></span> &nbsp;|&nbsp;
-    <a href="https://github.com/TI-capacitor">github.com/TI-capacitor</a> &nbsp;|&nbsp;
-    <a href="../index.html">portfolio</a> &nbsp;|&nbsp;
-    <a href="https://www.linkedin.com/in/daniel-barreiro-torres">linkedin.com/in/daniel-barreiro-torres</a>
+    Dorado, PR &nbsp;|&nbsp;
+    <a href="mailto:danielbarreiro014@gmail.com">danielbarreiro014@gmail.com</a> &nbsp;|&nbsp;
+    <a href="tel:+19394604198">(939) 460-4198</a> &nbsp;|&nbsp;
+    <a href="https://www.linkedin.com/in/daniel-barreiro-torres">linkedin.com/in/daniel-barreiro-torres</a> &nbsp;|&nbsp;
+    <a href="https://github.com/TI-capacitor">github.com/TI-capacitor</a>
+  </div>
+
+  <div class="summary">
+    Computer engineering student (B.S. expected 2028) building autonomous systems in C/C++, Python, and ROS 2 across
+    embedded hardware, computer vision, and PCB design. Led the software subteam for a NASA Space Grant Lunabotics
+    robot and placed 3rd in an RTX/Collins Aerospace autonomous vehicle competition.
   </div>
 
   <div class="sec-head">Technical Skills</div>
-  <div class="skill-line"><b>Languages:</b> C, C++, Python, MATLAB, HTML, CSS, JS</div>
-  <div class="skill-line"><b>Technologies:</b> FPGA, Analog &amp; Digital Circuit Design, ROS 2, Git, PCB Design, SSH, DHCP</div>
-  <div class="skill-line"><b>Tools:</b> Linux/Bash, Vim, LTSpice, LogiSim, Multisim, KiCad, EasyEDA, AutoCAD, Oscilloscopes, Function Generators, Microsoft Office Suite, Project Management</div>
+  <div class="skill-line"><b>Languages:</b> C, C++, Python, MATLAB, R, JavaScript, HTML/CSS</div>
+  <div class="skill-line"><b>Embedded &amp; Hardware:</b> ESP32, Raspberry Pi, ROS 2, SPI/UART serial, H-bridge motor drivers, Verilog, PCB design (KiCad, EasyEDA), LTSpice, Multisim, LogiSim, oscilloscopes, function generators</div>
+  <div class="skill-line"><b>Software &amp; Tools:</b> Git, Linux/Bash, Vim, SSH, OpenCV, Tkinter, RStudio, Google Apps Script, AutoCAD</div>
 
   <div class="sec-head">Experience</div>
 
@@ -151,34 +127,33 @@
     </div>
     <div class="entry-org">Inter American University of Puerto Rico, Bayamón</div>
     <ul>
-      <li>Revived a stalled software subteam by authoring a 3-phase strategy plan, taking the project from no working prototype to a demoed autonomous system ahead of the competition deadline.</li>
-      <li>Architected a dual-MCU control system pairing an ESP32 (SPI slave, real-time motor control) with a Raspberry Pi (SPI master, autonomy and vision), running ROS 2 Jazzy with a manual override failsafe.</li>
-      <li>Pivoted the navigation stack to ArUco marker detection with OpenCV, cutting technical risk enough to help win sponsorship funding for the team's 2027–2028 competition cycle.</li>
+      <li>Revived a stalled 4</span>-member software subteam by authoring a 3-phase strategy plan, moving the project from no working prototype to a demoed autonomous system 12 weeks before the competition deadline.</li>
+      <li>Architected a dual-MCU control system pairing an ESP32 (SPI slave, real-time motor control) with a Raspberry Pi (SPI master, autonomy and vision) on ROS 2 Jazzy, with a manual override failsafe.</li>
+      <li>Rebuilt the navigation stack around ArUco marker detection in OpenCV, cutting technical risk in the design that won sponsorship funding for the team's 2027–2028 competition cycle.</li>
     </ul>
   </div>
 
   <div class="entry">
     <div class="entry-top">
       <span class="entry-title">Engineering Team Member — RTX / Collins Aerospace Autonomous Vehicle Competition</span>
-      <span class="entry-date">Jan – May 2025</span>
+      <span class="entry-date">Jan 2025 – May 2025</span>
     </div>
     <div class="entry-org">Inter American University of Puerto Rico, Bayamón</div>
     <ul>
-      <li>Placed 3rd of teams in a collegiate autonomous vehicle competition sponsored by RTX/Collins Aerospace.</li>
-      <li>Built a C++ control interface over serial communication to feed Raspberry Pi vision data to the vehicle's MCU; configured ArUco marker detection remotely via SSH and triggered a relay-based alarm on successful target lock.</li>
+      <li>Placed 3rd of 4 collegiate teams in an autonomous vehicle competition sponsored by RTX/Collins Aerospace.</li>
+      <li>Built a C++ control interface over serial to feed Raspberry Pi vision data to the vehicle MCU; configured ArUco marker detection remotely over SSH and triggered a relay-based alarm on target lock.</li>
     </ul>
   </div>
 
   <div class="entry">
     <div class="entry-top">
       <span class="entry-title">Research Intern — CURE Program</span>
-      <span class="entry-date">Jul – Dec 2025</span>
+      <span class="entry-date">Jul 2025 – Dec 2025</span>
     </div>
     <div class="entry-org">Illinois State University, Normal, IL</div>
     <ul>
-      <li>Led an independent geospatial analysis of vehicle density and chronic obstructive pulmonary disease (COPD) rates across Chicago communities, from data acquisition through final spatial visualization.</li>
-      <li>Cleaned and processed public health datasets from the Chicago Data Portal in R/RStudio, an environment learned from scratch during the internship.</li>
-      <li>Joined Chicago geographic boundary shapefiles (.SHP) with community-level COPD data to map disease prevalence against vehicle density, surfacing positive spatial correlation.</li>
+      <li>Ran an independent geospatial study of vehicle density against chronic obstructive pulmonary disease (COPD) rates across Chicago community areas, from data acquisition through final spatial visualization.</li>
+      <li>Learned R/RStudio from scratch to clean Chicago Data Portal health datasets and join them to geographic boundary shapefiles (.SHP), producing maps that surfaced a positive spatial correlation.</li>
     </ul>
   </div>
 
@@ -187,71 +162,80 @@
       <span class="entry-title">Founder &amp; Lead Tutor</span>
       <span class="entry-date">Aug 2025 – Present</span>
     </div>
-    <div class="entry-org">Dan Tutoring</div>
+    <div class="entry-org">Dan Tutoring, Puerto Rico</div>
     <ul>
-      <li>Founded a bilingual (EN/ES) engineering tutoring business aimed at at-risk Puerto Rican students..</li>
-      <li>Built a full-stack booking platform with a relational database, interactive scheduling calendar, and automated email confirmation tokens with Google Apps Script.</li>
-      <li>Secured the platform with reCAPTCHA v3 and designed the UI to be fully bilingual, widening access for Spanish-dominant students and families.</li>
+      <li>Founded a bilingual (EN/ES) engineering tutoring service for at-risk Puerto Rican students, delivering more than 40 sessions to date.</li>
+      <li>Built and deployed the full-stack booking platform in Google Apps Script: relational database, interactive scheduling calendar, tokenized email confirmations, and reCAPTCHA v3, replacing manual scheduling with bilingual accessibility.</li>
     </ul>
   </div>
 
   <div class="sec-head">Projects</div>
 
   <div class="entry">
-    <div class="proj-top">
-      <span class="entry-title">Autonomous Rover — Eugene v0.2.0</span>
-      <span class="entry-date">2024 – 2025</span>
+    <div class="entry-top">
+      <span class="entry-title">Automatic Irrigation System — Embedded C, Android, PCB</span>
+      <span class="entry-date">June 2026</span>
     </div>
     <ul>
-      <li>Designed OOP embedded firmware (Command + Movement classes) with serial parsing and dual-channel H-bridge PWM motor control; the modular Eugene.h / Eugene.cpp architecture became the NASA Lunabotics hardware prototype.</li>
-      <li>Constantly updated and documented</li>
+      <li>Designed a closed-loop autonomous irrigation system in response to Puerto Rico's drought crisis: soil moisture sensor feedback driving a solenoid valve, a Bluetooth Android control app, and an off-grid battery charging circuit.</li>
+      <li>Schematic-captured and routed a custom PCB in KiCad to consolidate the sensor, valve driver, and charging circuits onto a single board, then reworked the layout after bench testing exposed Back EMF interference.</li>
     </ul>
   </div>
 
   <div class="entry">
-    <div class="proj-top">
-      <span class="entry-title">Automatic Irrigation System</span>
-      <a>2026</a>
+    <div class="entry-top">
+      <span class="entry-title">Autonomous Rover "Eugene" v0.2.0 — Embedded C++</span>
+      <span class="entry-date">Dec 2025</span>
     </div>
     <ul>
-      <li>Designed a closed-loop autonomous irrigation system in response to the drought crisis in Puerto Rico</li> 
-      <li>Created closed loop Sensor feedback with solenoid valve for autonomous irrigation, paired with a Bluetooth Android app and an off-grid battery charging circuit.</li>
+      <li>Designed object-oriented embedded firmware (Command and Movement classes) with serial command parsing and dual-channel H-bridge PWM motor control.</li>
+      <li>Structured the code as a reusable Eugene.h / Eugene.cpp library, which became the hardware prototype the NASA Lunabotics platform was built on.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-top">
+      <span class="entry-title">QR Code Generator — Python Desktop App</span>
+      <span class="entry-date"><span class="placeholder">Aug</span> 2026 – Present</span>
+    </div>
+    <ul>
+      <li>Built a desktop QR code generator in Python, refactoring a console script into separate GUI and QR classes and replacing manual path entry with a Tkinter file dialog.</li>
+      <li>Added input validation and exception handling for blank URLs, empty filenames, and cancelled dialogs; handles cross-platform save paths with <i>os.path</i> and auto-appends the .png extension.</li>
     </ul>
   </div>
 
   <div class="sec-head">Education</div>
-  <div class="edu-line">
-    <span class="left">Inter American University of Puerto Rico — B.S. Computer Engineering, Bayamón Campus</span>
-    <span class="right">2024 – 2028</span>
+  <div class="entry">
+    <div class="entry-top">
+      <span class="entry-title">Inter American University of Puerto Rico, Bayamón — B.S. Computer Engineering</span>
+      <span class="entry-date">Expected May 2028</span>
+    </div>
+    <ul>
+      <li>Ing. José Romero Villanueva Scholarship, College of Engineers and Surveyors of Puerto Rico (CIAPR); SIICOM student chapter Vocal.</li>
+      <li>Relevant coursework: Electric Circuits, Logic Circuits, Microcontrollers, Advanced Programming, Aerospace PCB Design.</li>
+    </ul>
   </div>
-  <ul style="margin-top:0.5pt;">
-    <li>Ing. José Romero Villanueva Scholarship — College of Engineers and Surveyors of Puerto Rico (CIAPR)</li>
-    <li>SIICOM member — student chapter, College of Engineers and Surveyors of Puerto Rico</li>
-    <li><strong>Relevant Courses: Electric Circuits, Logic Circuits, Microcontrollers, Advanced Programming, Aerospace-PCB design</strong></li>
-  </ul>
 
   <div class="sec-head">Certifications</div>
 
   <div class="plain-line">
-    <span class="left">OSHA 30-Hour Construction Outreach Training</span>
-    <span class="right">Occupational Safety and Health Administration (OSHA)</span>
+    <span class="left">Cisco Certified Support Technician — Networking (CCST)</span>
+    <span class="right">Cisco, exam Oct 2026</span>
   </div>
-  <!-- FAA CERTIFICATION
+  <div class="plain-line">
+    <span class="left">OSHA 30-Hour Construction Outreach Training</span>
+    <span class="right">OSHA, 2023</span>
+  </div>
+  <!-- <div class="plain-line">
+    <span class="left">Advancing Your Career — Professional Development</span>
+    <span class="right">Boston Scientific Corporation, 2026</span>
+  </div> -->
+
   <div class="plain-line">
     <span class="left">FAA Remote Pilot Certificate — Part 107</span>
     <span class="right">Federal Aviation Administration (FAA)</span>
   </div>
-  -->
-  <div class="plain-line">
-    <span class="left">Cisco Certified Support Technician (Networking)</span>
-    <span class="right">Exam scheduled September 5, 2026</span>
-  </div>
+ 
 
-  <div class="plain-line">
-    <span class="left">Advancing Your Career — Professional Development</span>
-    <span class="right">Boston Scientific Corporation, 2026</span>
-  </div>
-
-  
 </body>
 </html>
