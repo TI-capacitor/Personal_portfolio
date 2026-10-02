@@ -41,13 +41,7 @@
 
     .contact a { color: #000; text-decoration: none; }
 
-    .summary {
-      font-size: 10pt;
-      text-align: justify;
-      margin-bottom: 2pt;
-    }
-
-    /* Fill these in / verify before exporting the PDF. Delete the class, not the text. */
+    /* Fill in / verify before exporting the PDF. Delete the class, not the text. */
     .placeholder { color: #c0392b; font-weight: bold; }
 
     .sec-head {
@@ -130,10 +124,9 @@
     <div class="entry-org">Dan Tutoring, Puerto Rico</div>
     <ul>
       <li>Founded a bilingual (EN/ES) engineering tutoring service for at-risk Puerto Rican students, delivering more than 40 sessions to date.</li>
-      <li>Built and deployed the full-stack booking platform in Google Apps Script: relational database, interactive scheduling calendar, tokenized email confirmations, and reCAPTCHA v3, replacing manual scheduling with bilingual accessibility.</li>
+      <li>Built and deployed the booking platform in Google Apps Script: relational database, scheduling calendar, tokenized email confirmations, and reCAPTCHA v3, replacing manual scheduling with a bilingual self-serve flow.</li>
     </ul>
   </div>
-
 
   <div class="entry">
     <div class="entry-top">
@@ -142,9 +135,9 @@
     </div>
     <div class="entry-org">Inter American University of Puerto Rico, Bayamón</div>
     <ul>
-      <li>Revived a stalled 4-member software subteam by authoring a 3-phase strategy plan, moving the project from no working prototype to a demoed autonomous system 12 weeks before the competition deadline.</li>
-      <li>Engineered a dual-MCU rover control architecture, achieving [X ms] motor-command latency at [Y Hz] and [Z ms] failsafe switchover, by integrating an ESP32 as an SPI slave to a Raspberry Pi SPI master running ROS 2 Jazzy.</li>
-      <li>Reduced navigation-system design risk measured by securing sponsorship funding for the team’s 2027–2028 competition cycle by replacing the existing navigation stack with OpenCV-based ArUco marker detection.</li>
+      <li>Led a 4-member software subteam and wrote a 3-phase strategy plan, moving the project from no working prototype to a demoed autonomous system 12 weeks before the competition deadline.</li>
+      <li>Designed a dual-MCU control system pairing an ESP32 (SPI slave, real-time motor control) with a Raspberry Pi (SPI master, autonomy and vision) on ROS 2 Jazzy, with a manual override failsafe.</li>
+      <li>Rebuilt the navigation stack around ArUco marker detection in OpenCV, lowering the design risk enough for the team to secure sponsorship funding for its 2027–2028 competition cycle.</li>
     </ul>
   </div>
 
@@ -156,10 +149,9 @@
     <div class="entry-org">Illinois State University, Normal, IL</div>
     <ul>
       <li>Ran an independent geospatial study of vehicle density against chronic obstructive pulmonary disease (COPD) rates across Chicago community areas, from data acquisition through final spatial visualization.</li>
-      <li>Learned R/RStudio from scratch to clean Chicago Data Portal health datasets and join them to geographic boundary shapefiles (.SHP), producing maps that surfaced a positive spatial correlation.</li>
+      <li>Learned R and RStudio from scratch to clean Chicago Data Portal health datasets and join them to geographic boundary shapefiles (.SHP), producing maps that surfaced a positive spatial correlation.</li>
     </ul>
   </div>
-
 
   <div class="entry">
     <div class="entry-top">
@@ -168,12 +160,11 @@
     </div>
     <div class="entry-org">Inter American University of Puerto Rico, Bayamón</div>
     <ul>
-      <li>Placed 3rd of 4 collegiate teams in an autonomous vehicle competition sponsored by RTX/Collins Aerospace.</li>
-      <li>Built a C++ control interface over serial to feed Raspberry Pi vision data to the vehicle MCU; configured ArUco marker detection remotely over SSH and triggered a relay-based alarm on target lock.</li>
+      <li>Placed 3rd in a collegiate autonomous vehicle competition sponsored by RTX/Collins Aerospace.</li>
+      <li>Built a C++ control interface over serial to pass Raspberry Pi vision data to the vehicle MCU, configured ArUco marker detection over SSH, and triggered a relay-based alarm on target lock.</li>
     </ul>
   </div>
 
-  
   <div class="sec-head">Projects</div>
 
   <div class="entry">
@@ -183,7 +174,7 @@
     </div>
     <ul>
       <li>Designed a closed-loop autonomous irrigation system in response to Puerto Rico's drought crisis: soil moisture sensor feedback driving a solenoid valve, a Bluetooth Android control app, and an off-grid battery charging circuit.</li>
-      <li>Schematic-captured and routed a custom PCB in KiCad to consolidate the sensor, valve driver, and charging circuits onto a single board, then reworked the layout after bench testing exposed Back EMF interference.</li>
+      <li>Drew the schematic and routed a custom PCB in KiCad to put the sensor, valve driver, and charging circuits on a single board, then reworked the layout after bench testing exposed back-EMF interference.</li>
     </ul>
   </div>
 
@@ -193,7 +184,7 @@
       <span class="entry-date">Winter 2025</span>
     </div>
     <ul>
-      <li>Designed object-oriented embedded firmware (Command and Movement classes) with serial command parsing and dual-channel H-bridge PWM motor control.</li>
+      <li>Wrote object-oriented embedded firmware (Command and Movement classes) with serial command parsing and dual-channel H-bridge PWM motor control.</li>
       <li>Structured the code as a reusable Eugene.h / Eugene.cpp library, which became the hardware prototype the NASA Lunabotics platform was built on.</li>
     </ul>
   </div>
@@ -201,7 +192,7 @@
   <div class="entry">
     <div class="entry-top">
       <span class="entry-title">QR Code Generator — Python Desktop App</span>
-      <span class="entry-date">Autumn 2026</span>
+      <span class="entry-date">Present</span>
     </div>
     <ul>
       <li>Built a desktop QR code generator in Python, refactoring a console script into separate GUI and QR classes and replacing manual path entry with a Tkinter file dialog.</li>
@@ -210,11 +201,10 @@
   </div>
 
   <div class="sec-head">Technical Skills</div>
-  <div class="skill-line"><b>Languages:</b> C, C++, Python, MATLAB, JavaScript, HTML/CSS</div>
-  <div class="skill-line"><b>Embedded &amp; Hardware:</b> ESP32, Raspberry Pi, ROS 2, Basys 3, SPI/UART serial, H-bridge motor drivers, Verilog, PCB design (KiCad, EasyEDA), LTSpice, Multisim, oscilloscopes, function generators</div>
-  <div class="skill-line"><b>Software &amp; Tools:</b> Git, Linux/Bash, Vim, SSH, OpenCV, Tkinter, RStudio, AutoCAD</div>
-=
-  
+  <div class="skill-line"><b>Languages:</b> C, C++, Python, MATLAB, R, Verilog, HTML/CSS</div>
+  <div class="skill-line"><b>Embedded &amp; Hardware:</b> ESP32, Raspberry Pi, Arduino, Basys 3 FPGA, ROS 2, SPI, PWM, PCB design (KiCad, EasyEDA), Multisim, oscilloscopes, function generators</div>
+  <div class="skill-line"><b>Software &amp; Tools:</b> Git, Linux, Bash, Vim, SSH, OpenCV, Tkinter, RStudio, Google Apps Script, AutoCAD</div>
+
   <div class="sec-head">Certifications</div>
 
   <div class="plain-line">
@@ -222,13 +212,12 @@
     <span class="right">Cisco, exam Oct 2026</span>
   </div>
   <div class="plain-line">
+    <span class="left">FAA Remote Pilot Certificate — Part 107</span>
+    <span class="right">Federal Aviation Administration</span>
+  </div>
+  <div class="plain-line">
     <span class="left">OSHA 30-Hour Construction Outreach Training</span>
     <span class="right">OSHA, 2023</span>
-  </div>
-
-  <div class="plain-line">
-    <span class="left">FAA Remote Pilot Certificate — Part 107</span>
-    <span class="right">Federal Aviation Administration (FAA)</span>
   </div>
 
 </body>
