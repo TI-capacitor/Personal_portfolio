@@ -2,77 +2,42 @@
    script.js
    ========================================= */
 
-// ---- Hamburger / Mobile Menu ----
+// ---- Mobile menu ----
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
+function setMenu(open) {
+  mobileMenu.classList.toggle('open', open);
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+  hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+}
+
 hamburger.addEventListener('click', () => {
-  const isOpen = mobileMenu.classList.toggle('open');
-  hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-  const spans = hamburger.querySelectorAll('span');
-  if (isOpen) {
-    spans[0].style.transform = 'translateY(7px) rotate(45deg)';
-    spans[1].style.opacity = '0';
-    spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
-  } else {
-    spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
-  }
+  setMenu(!mobileMenu.classList.contains('open'));
 });
 
 document.querySelectorAll('.mm-link').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    hamburger.querySelectorAll('span').forEach(s => {
-      s.style.transform = ''; s.style.opacity = '';
-    });
-  });
+  link.addEventListener('click', () => setMenu(false));
 });
 
-// ---- Accordion with Watch Dogs diamond ----
+// ---- Accordion + diamond hack icon ----
+// The diamond trace animation is handled in CSS: it only transitions
+// while .open is set, so closing resets it instantly and every open replays it.
 document.querySelectorAll('.accordion-header').forEach(header => {
+  const status = header.querySelector('.acc-status-text');
+  const lockedText = status ? (status.dataset.locked || 'STATUS: LOCKED') : '';
+
   header.addEventListener('click', () => {
     const accordion = header.closest('.accordion');
     const isOpen = accordion.classList.toggle('open');
     header.setAttribute('aria-expanded', isOpen);
-
-    // Status text swap
-    const statusText = header.querySelector('.acc-status-text');
-    if (statusText) {
-      statusText.textContent = isOpen ? 'STATUS: ACCESSED' : 'STATUS: LOCKED';
-    }
-
-    // Diamond trace: reset then re-trigger so animation replays each open
-    const trace = header.querySelector('.diamond-trace');
-    if (trace && isOpen) {
-      // Force reflow to restart the CSS transition
-      trace.style.transition = 'none';
-      trace.style.strokeDashoffset = '62';
-      trace.getBoundingClientRect(); // flush
-      trace.style.transition = '';  // restore — CSS takes over
-    }
+    if (status) status.textContent = isOpen ? 'STATUS: ACCESSED' : lockedText;
   });
 });
 
-// ---- Scroll Reveal ----
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const siblings = entry.target.parentElement.querySelectorAll('.reveal:not(.visible)');
-      siblings.forEach((el, idx) => {
-        setTimeout(() => el.classList.add('visible'), idx * 80);
-      });
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-// ---- Nav shadow on scroll ----
+// ---- Nav border once the page scrolls ----
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  nav.style.boxShadow = window.scrollY > 10
-    ? '0 4px 24px rgba(0,0,0,0.5)'
-    : 'none';
+  nav.classList.toggle('scrolled', window.scrollY > 10);
 }, { passive: true });

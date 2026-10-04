@@ -6,16 +6,14 @@
   <title>Daniel Barreiro Torres | Engineering Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="noise-overlay" aria-hidden="true"></div>
-
   <!-- NAV -->
   <nav class="nav" id="nav">
-    <span class="nav-logo">DBT</span>
+    <a href="#home" class="nav-logo">DBT</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -25,7 +23,7 @@
       <li><a href="#volunteering">Volunteering</a></li>
     </ul>
     <a href="./docs/resume.html" class="btn-nav" target="_blank">Resume ↗</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -46,72 +44,76 @@
   <!-- HERO -->
   <header class="hero" id="home">
     <div class="scanning-line" aria-hidden="true"></div>
-    <div class="hero-content reveal">
-      <div class="hero-status">
-        <span class="status-dot"></span>
-        <span class="status-label">// SYSTEM_ONLINE</span>
-      </div>
-      <p class="hero-eyebrow">Computer Engineering Junior</p>
+    <div class="hero-content">
       <h1 class="hero-name">Daniel<br>Barreiro<br>Torres</h1>
-      <p class="hero-tagline">Embedded Systems · PCB Design · Hardware Development</p>
+
+      <dl class="profiler tech-frame">
+        <div class="profiler-row">
+          <dt>Occupation</dt>
+          <dd>Computer Engineering student, UIPR</dd>
+        </div>
+        <div class="profiler-row">
+          <dt>Focus</dt>
+          <dd>Embedded systems, PCB design, firmware</dd>
+        </div>
+        <div class="profiler-row">
+          <dt>Location</dt>
+          <dd>Puerto Rico, USA</dd>
+        </div>
+        <div class="profiler-row">
+          <dt>Status</dt>
+          <dd class="profiler-hl">Looking for hardware and software roles</dd>
+        </div>
+      </dl>
+
       <div class="hero-cta">
-        <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="mailto:danielbarreiro014@gmail.com" class="btn-secondary">Get in Touch</a>
+        <a href="#projects" class="btn-primary">View projects</a>
+        <a href="mailto:danielbarreiro014@gmail.com" class="btn-secondary">Email me</a>
       </div>
+
       <div class="hero-links">
-        <a href="https://github.com/TI-capacitor" target="_blank" rel="noopener">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub
-        </a>
-        <a href="./docs/resume.html" target="_blank">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          Resume
-        </a>
+        <a href="https://github.com/TI-capacitor" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="./docs/resume.html" target="_blank">Resume ↗</a>
       </div>
     </div>
-    <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
   </header>
 
   <!-- ABOUT -->
   <section class="section" id="about">
     <div class="container">
-      <span class="section-label">About Me</span>
-      <div class="about-grid reveal">
+      <div class="section-head">
+        <h2 class="section-title">About</h2>
+      </div>
+      <div class="about-grid">
         <div class="about-text">
-          <h2 class="section-title">Engineer autodidact in hardware &amp; software</h2>
-          <p>Computer Engineering junior, with hands-on experience in embedded systems, PCB design, and robotics — plus a solid secondary foundation in full-stack web development.</p>
-          <p>Founder of Dan Tutoring, Programming Team Leader for NASA Lunabotics 2026, and FAA-certified remote pilot. I actively seek roles where I can contribute at both the hardware and software layers.</p>
+          <p>I'm a computer engineering junior at the Inter American University of Puerto Rico Bayamón. Most of what I build is hardware: PCBs in KiCad, firmware for ESP32 and Arduino boards, and robots that need both. I also write web software when a project calls for it, like the booking system that runs my tutoring business.</p>
+          <p>Last season I led the programming team for NASA Lunabotics. I run Dan Tutoring and hold an FAA Part 107 remote pilot certificate. I'm looking for roles where I can work on both sides of the hardware and software line.</p>
         </div>
         <div class="about-photo-wrap">
-          <div class="photo-placeholder tech-frame">
+          <div class="photo-frame tech-frame">
             <img src="Pictures/me.png" alt="Daniel Barreiro Torres">
           </div>
-          <div class="contact-pill">
-            <a href="mailto:danielbarreiro014@gmail.com">danielbarreiro014@gmail.com</a>
-          </div>
+          <a class="contact-line" href="mailto:danielbarreiro014@gmail.com">danielbarreiro014@gmail.com</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section class="section section-dark" id="projects">
+  <section class="section section-alt" id="projects">
     <div class="container">
-      <div class="section-heading-row">
-        <div>
-          <span class="section-label light">Projects</span>
-          <h2 class="section-title light reveal">Things I've Built</h2>
-        </div>
-        <span class="section-enc-tag">ENCRYPTION: ACTIVE</span>
+      <div class="section-head">
+        <h2 class="section-title">Projects</h2>
+        <span class="section-tag">ENCRYPTION: ACTIVE</span>
       </div>
 
-      <!-- PROJECT 1: Autonomous Rover -->
-      <div class="accordion reveal tech-frame" data-open="false">
+      <!-- PRJ-001 -->
+      <div class="accordion tech-frame">
         <button class="accordion-header" aria-expanded="false">
           <div class="acc-left">
             <span class="acc-id">[PRJ-001]</span>
             <span class="acc-tag">Robotics</span>
-            <h3>Autonomous Rover — Eugene v0.2.0</h3>
+            <h3>Autonomous Rover: Eugene v0.2.0</h3>
           </div>
           <div class="acc-right">
             <span class="acc-status-text">STATUS: LOCKED</span>
@@ -126,36 +128,25 @@
         <div class="accordion-body">
           <div class="acc-inner">
             <div class="acc-media">
-              <div class="img-placeholder">
-                <img src="Pictures/Eugene.jpeg" alt="Rover Photo">
-                <p class="img-label">Rover Photo</p>
-              </div>
-              <div class="img-placeholder">
-                <img src="Pictures/eugene-schem.png" alt="Schematic">
-                <p class="img-label">Schematic</p>
-              </div>
-              <div class="img-placeholder">
-                <img src="Pictures/eugene-class.png" alt="Code Snippet">
-                <p class="img-label">Code Snippet</p>
-              </div>
+              <figure class="media-slot"><img src="Pictures/Eugene.jpeg" alt="Eugene rover"><figcaption>Rover</figcaption></figure>
+              <figure class="media-slot"><img src="Pictures/eugene-schem.png" alt="Rover schematic"><figcaption>Schematic</figcaption></figure>
+              <figure class="media-slot"><img src="Pictures/eugene-class.png" alt="Firmware class code"><figcaption>Firmware</figcaption></figure>
             </div>
             <div class="acc-details">
               <ul>
-                <li>Designed OOP firmware architecture with separate <code>Command</code> and <code>Movement</code> classes — serial command parsing with typecast-to-lowercase normalization, and H-bridge motor control via PWM (L298N driver)</li>
-                <li>Implemented movement methods: <code>forward()</code>, <code>backward()</code>, <code>pivotRight()</code>, <code>pivotLeft()</code>, <code>stopMotors()</code> — all with dual-channel PWM via <code>analogWrite()</code></li>
-                <li>Built modular header file architecture (<code>Eugene.h</code> / <code>Eugene.cpp</code>) to enable clean subsystem separation and code reuse</li>
-                <li>Served as hardware and firmware prototype for the NASA Space Grant PR Lunabotics project</li>
+                <li>Split the firmware into two classes: <code>Command</code> parses serial input (normalized to lowercase) and <code>Movement</code> drives an L298N H-bridge with PWM.</li>
+                <li><code>forward()</code>, <code>backward()</code>, <code>pivotRight()</code>, <code>pivotLeft()</code> and <code>stopMotors()</code> each set both PWM channels through <code>analogWrite()</code>.</li>
+                <li>Kept the code in <code>Eugene.h</code> / <code>Eugene.cpp</code> so subsystems can be swapped or reused.</li>
+                <li>Served as the hardware and firmware prototype for the NASA Space Grant PR Lunabotics team.</li>
               </ul>
-              <div class="acc-badges">
-                <span>Embedded C++</span><span>OOP Firmware</span><span>H-Bridge / PWM</span><span>Serial Parsing</span><span>PCB</span>
-              </div>
+              <p class="stack"><span class="stack-label">STACK</span>Embedded C++ / OOP firmware / H-bridge + PWM / Serial parsing / PCB</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- PROJECT 2: Irrigation System -->
-      <div class="accordion reveal tech-frame" data-open="false">
+      <!-- PRJ-002 -->
+      <div class="accordion tech-frame">
         <button class="accordion-header" aria-expanded="false">
           <div class="acc-left">
             <span class="acc-id">[PRJ-002]</span>
@@ -175,46 +166,32 @@
         <div class="accordion-body">
           <div class="acc-inner">
             <div class="acc-media">
-              <div class="img-placeholder">
-                <img src="Pictures/irrig-pcb.png" alt="PCB Layout">
-                <p class="img-label">PCB Layout</p>
-              </div>
-              <div class="img-placeholder">
-                <img src="Pictures/irrig-schem.png" alt="Schematic">
-                <p class="img-label">Schematic</p>
-              </div>
-              <div class="img-placeholder">
-                <img src="Pictures/irrig-assembly.png" alt="Assembly Photo">
-                <p class="img-label">Assembly Photo</p>
-              </div>
-              <div class="img-placeholder">
-                <img src="Pictures/irrig-ui.png" alt="Android App UI">
-                <p class="img-label">Android App UI</p>
-              </div>
+              <figure class="media-slot"><img src="Pictures/irrig-pcb.png" alt="PCB layout"><figcaption>PCB layout</figcaption></figure>
+              <figure class="media-slot"><img src="Pictures/irrig-schem.png" alt="Schematic"><figcaption>Schematic</figcaption></figure>
+              <figure class="media-slot"><img src="Pictures/irrig-assembly.png" alt="Assembled board"><figcaption>Assembly</figcaption></figure>
+              <figure class="media-slot"><img src="Pictures/irrig-ui.png" alt="Android app UI"><figcaption>Android app</figcaption></figure>
             </div>
             <div class="acc-details">
               <ul>
-                <li>Closed-loop moisture sensor feedback drives solenoid valve control for home crop irrigation</li>
-                <li>Custom PCB designed in KiCad with deliberate attention to signal noise and parasitic inductance</li>
-                <li>Bluetooth control via custom Android application; on-board battery charging circuit for remote deployment</li>
-                <li>Solar panel integration currently in development</li>
+                <li>A moisture sensor closes the loop: when the soil reads dry, the board opens a solenoid valve.</li>
+                <li>Custom PCB in KiCad, routed to keep noise and parasitic inductance down.</li>
+                <li>Controlled over Bluetooth from a custom Android app. On-board battery charging lets it run away from an outlet.</li>
+                <li>Next step: solar charging.</li>
               </ul>
-              <div class="acc-badges">
-                <span>KiCad</span><span>Gerber / BOM</span><span>ESP32</span><span>Bluetooth</span><span>Android</span><span>Power Design</span>
-              </div>
-              <a href="https://github.com/TI-capacitor/Embedded_Irrigation_system/tree/main/hardware/PCB" class="acc-link" target="_blank" rel="noopener">View PCB Files on GitHub ↗</a>
+              <p class="stack"><span class="stack-label">STACK</span>KiCad / Gerber + BOM / ESP32 / Bluetooth / Android / Power design</p>
+              <a href="https://github.com/TI-capacitor/Embedded_Irrigation_system/tree/main/hardware/PCB" class="acc-link" target="_blank" rel="noopener">PCB files on GitHub ↗</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- PROJECT 3: Dan Tutoring Platform -->
-      <div class="accordion reveal tech-frame" data-open="false">
+      <!-- PRJ-003 -->
+      <div class="accordion tech-frame">
         <button class="accordion-header" aria-expanded="false">
           <div class="acc-left">
             <span class="acc-id">[PRJ-003]</span>
             <span class="acc-tag">Full-Stack</span>
-            <h3>Dan Tutoring — Booking Platform</h3>
+            <h3>Dan Tutoring Booking Platform</h3>
           </div>
           <div class="acc-right">
             <span class="acc-status-text">STATUS: LOCKED</span>
@@ -229,32 +206,24 @@
         <div class="accordion-body">
           <div class="acc-inner">
             <div class="acc-media">
-              <div class="img-placeholder">
-                <img src="" alt="Booking System UI">
-                <p class="img-label">Booking UI</p>
-              </div>
-              <div class="img-placeholder">
-                <img src="" alt="Database Schema">
-                <p class="img-label">Database Schema</p>
-              </div>
+              <figure class="media-slot"><img src="Pictures/tutoring-UI.png" alt="Booking UI"><figcaption>Booking UI</figcaption></figure>
+              <figure class="media-slot"><img src="" alt="Database schema"><figcaption>Database schema</figcaption></figure>
             </div>
             <div class="acc-details">
               <ul>
-                <li>Built a complete appointment booking web app from scratch — calendar, time-slot selection, reCAPTCHA v3 bot protection, and automated email confirmation flow</li>
-                <li>Designed relational database schema to track students, sessions, courses, and appointment state</li>
-                <li>Integrated bilingual support (EN/ES), Google Meet link automation, and a 15-minute confirmation token system</li>
-                <li>Planned and mitigated business risks: server downtime recovery, cybersecurity (password rotation, local backups), and customer communication protocols</li>
+                <li>Appointment booking web app built from scratch: calendar, time-slot picker, reCAPTCHA v3, and email confirmations.</li>
+                <li>Relational schema for students, sessions, courses, and appointment state.</li>
+                <li>English/Spanish interface, automatic Google Meet links, and confirmation tokens that expire after 15 minutes.</li>
+                <li>Wrote a risk plan for the business: recovering from server downtime, rotating passwords, keeping local backups, and telling customers when something breaks.</li>
               </ul>
-              <div class="acc-badges">
-                <span>HTML/CSS/JS</span><span>Database Design</span><span>reCAPTCHA v3</span><span>Email Automation</span><span>i18n</span>
-              </div>
+              <p class="stack"><span class="stack-label">STACK</span>HTML/CSS/JS / Database design / reCAPTCHA v3 / Email automation / i18n</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- PROJECT 4: Coming Soon -->
-      <div class="accordion reveal tech-frame coming-soon" data-open="false">
+      <!-- PRJ-004 -->
+      <div class="accordion tech-frame coming-soon">
         <button class="accordion-header" aria-expanded="false">
           <div class="acc-left">
             <span class="acc-id">[PRJ-004]</span>
@@ -262,7 +231,7 @@
             <h3>Networking project</h3>
           </div>
           <div class="acc-right">
-            <span class="acc-status-text">STATUS: CLASSIFIED</span>
+            <span class="acc-status-text" data-locked="STATUS: CLASSIFIED">STATUS: CLASSIFIED</span>
             <span class="acc-icon" aria-hidden="true">
               <svg class="hack-diamond" width="28" height="28" viewBox="0 0 28 28">
                 <polygon class="diamond-shape" points="14,2 26,14 14,26 2,14" fill="none" stroke-width="1.5"/>
@@ -272,17 +241,8 @@
           </div>
         </button>
         <div class="accordion-body">
-          <div class="acc-inner">
-            <div class="acc-media">
-              <div class="img-placeholder wip-placeholder">
-                <p class="img-label">// IN DEVELOPMENT  >_></p>
-              </div>
-            </div>
-            <div class="acc-details">
-              <ul>
-                <li>Coming soon — project details will be updated here</li>
-              </ul>
-            </div>
+          <div class="acc-inner acc-inner-single">
+            <p class="wip-note">In development. Details will go here once there's something to show.</p>
           </div>
         </div>
       </div>
@@ -293,21 +253,18 @@
   <!-- EXPERIENCE -->
   <section class="section" id="experience">
     <div class="container">
-      <div class="section-heading-row">
-        <div>
-          <span class="section-label">Experience</span>
-          <h2 class="section-title reveal">Where I've Led</h2>
-        </div>
+      <div class="section-head">
+        <h2 class="section-title">Experience</h2>
       </div>
 
-      <!-- EXP 1: NASA -->
-      <div class="accordion reveal tech-frame" data-open="false">
+      <!-- EXP-001 -->
+      <div class="accordion tech-frame">
         <button class="accordion-header" aria-expanded="false">
           <div class="acc-left">
             <span class="acc-id">[EXP-001]</span>
             <span class="acc-tag highlight">NASA Space Grant PR</span>
             <h3>Programming Team Leader</h3>
-            <span class="acc-date">Aug 2025 – Apr 2026</span>
+            <span class="acc-date">Aug 2025 to Apr 2026</span>
           </div>
           <div class="acc-right">
             <span class="acc-status-text">STATUS: LOCKED</span>
@@ -322,46 +279,35 @@
         <div class="accordion-body">
           <div class="acc-inner">
             <div class="acc-media">
-              <div class="img-placeholder">
-                <img src="Pictures/nasa_team.jpeg" alt="Team Photo">
-                <p class="img-label">Team Photo</p>
-              </div>
-              <div class="img-placeholder">
-                <img src="" alt="Presentation Slide">
-                <p class="img-label">Presentation Slide</p>
-              </div>
-              <div class="img-placeholder">
-                <img src="" alt="Rover Progress">
-                <p class="img-label">Rover Progress</p>
-              </div>
+              <figure class="media-slot"><img src="Pictures/nasa_team.jpeg" alt="Lunabotics team"><figcaption>Team</figcaption></figure>
+              <figure class="media-slot"><img src="" alt="Presentation slide"><figcaption>Presentation</figcaption></figure>
+              <figure class="media-slot"><img src="" alt="Rover progress"><figcaption>Rover progress</figcaption></figure>
             </div>
             <div class="acc-details">
               <ul>
-                <li>Assumed leadership of the Lunabotics Software Subteam under emergency conditions; authored a formal Emergency Plan restructuring prior work into a 3-phase execution plan (Hardware Validation → Manual Override → Autonomy Framework)</li>
-                <li>Architected a dual-MCU system: ESP32 as SPI slave for real-time actuation (motors, servos, linear actuators) and Raspberry Pi as SPI master for higher-level autonomy and camera processing</li>
-                <li>Validated ROS 2 Jazzy runtime, configured Gazebo Harmonic simulation environment, and created first C++ ROS 2 package (<code>my_cpp_pkg</code>) with <code>ament_cmake</code></li>
-                <li>Designed and documented a Bluetooth gamepad control scheme (DualShock 4 via <code>esp32_bluepad</code>): tank drive on LS, servo tilt on buttons, linear actuator control on triggers</li>
-                <li>Pivoted autonomy approach from full SLAM to ArUco marker + OpenCV vision navigation to reduce technical risk and strengthen funding argument for 2027 competition</li>
-                <li>Grew team participation from ~22% to 100%, ran Git and instrumentation workshops, enforced engineering notebook standards, and contributed personal materials to prevent schedule slips</li>
-                <li>Delivered live progress presentation at EcoExploratorio; contributed to securing sponsorship for next semester</li>
+                <li>Took over the Lunabotics software subteam on short notice and wrote an emergency plan that reorganized existing work into three phases: hardware validation, manual override, then autonomy.</li>
+                <li>Designed a dual-MCU system. An ESP32 (SPI slave) runs motors, servos, and linear actuators in real time; a Raspberry Pi (SPI master) handles autonomy and camera processing.</li>
+                <li>Set up ROS 2 Jazzy and a Gazebo Harmonic simulation, and wrote a first C++ ROS 2 package (<code>my_cpp_pkg</code>, built with <code>ament_cmake</code>).</li>
+                <li>Mapped a DualShock 4 over Bluetooth with <code>esp32_bluepad</code>: tank drive on the left stick, servo tilt on the buttons, linear actuators on the triggers.</li>
+                <li>Switched autonomy from full SLAM to ArUco markers with OpenCV. Less technical risk, and a stronger case for 2027 funding.</li>
+                <li>Team participation went from about 22% to 100%. I ran Git and instrumentation workshops, held everyone to notebook standards, and brought my own parts when the schedule was at risk.</li>
+                <li>Presented live progress at EcoExploratorio, which helped secure sponsorship for the next semester.</li>
               </ul>
-              <div class="acc-badges">
-                <span>ROS 2 Jazzy</span><span>Gazebo Harmonic</span><span>ESP32</span><span>Raspberry Pi</span><span>SPI</span><span>LiDAR</span><span>OpenCV</span><span>Git</span><span>Systems Engineering</span>
-              </div>
-              <a href="./docs/inst.pdf" class="acc-link" target="_blank">View Instrumentation Workshop ↗</a>
+              <p class="stack"><span class="stack-label">STACK</span>ROS 2 Jazzy / Gazebo Harmonic / ESP32 / Raspberry Pi / SPI / LiDAR / OpenCV / Git</p>
+              <a href="./docs/inst.pdf" class="acc-link" target="_blank">Instrumentation workshop slides ↗</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- EXP 2: RTX Drone -->
-      <div class="accordion reveal tech-frame" data-open="false">
+      <!-- EXP-002 -->
+      <div class="accordion tech-frame">
         <button class="accordion-header" aria-expanded="false">
           <div class="acc-left">
             <span class="acc-id">[EXP-002]</span>
             <span class="acc-tag">RTX Competition</span>
             <h3>Autonomous Vehicle Competition</h3>
-            <span class="acc-date">Jan 2025 – May 2025</span>
+            <span class="acc-date">Jan 2025 to May 2025</span>
           </div>
           <div class="acc-right">
             <span class="acc-status-text">STATUS: LOCKED</span>
@@ -376,42 +322,31 @@
         <div class="accordion-body">
           <div class="acc-inner">
             <div class="acc-media">
-              <div class="img-placeholder">
-                <img src="Pictures/drone.jpeg" alt="Drone Build">
-                <p class="img-label">Drone Build</p>
-              </div>
-              <div class="img-placeholder">
-                <img src="" alt="Aruco Marker Demo">
-                <p class="img-label">Aruco Marker Demo</p>
-              </div>
-              <div class="img-placeholder">
-                <img src="" alt="Milling Work">
-                <p class="img-label">Milling Work</p>
-              </div>
+              <figure class="media-slot"><img src="Pictures/drone.jpeg" alt="Drone build"><figcaption>Drone build</figcaption></figure>
+              <figure class="media-slot"><img src="" alt="ArUco marker demo"><figcaption>ArUco demo</figcaption></figure>
+              <figure class="media-slot"><img src="" alt="Milling work"><figcaption>Milling</figcaption></figure>
             </div>
             <div class="acc-details">
-              <div class="achievement-badge">🥉 Third Place — University</div>
+              <p class="result-line"><span>RESULT</span>3rd place, university division</p>
               <ul>
-                <li>Implemented OpenCV + Python pipeline to detect ArUco markers for autonomous navigation decisions</li>
-                <li>Assembled amateur drone from components; completed formal FAA Drone Safety certification</li>
-                <li>Machined custom aluminum spacers on milling machine (threading, precision tolerancing)</li>
+                <li>Wrote a Python and OpenCV pipeline that detects ArUco markers and uses them for navigation decisions.</li>
+                <li>Built the drone from parts and completed FAA drone safety certification.</li>
+                <li>Machined custom aluminum spacers on a milling machine, including threading to tolerance.</li>
               </ul>
-              <div class="acc-badges">
-                <span>OpenCV</span><span>Python</span><span>ArUco Markers</span><span>Drone Assembly</span><span>CNC Milling</span>
-              </div>
+              <p class="stack"><span class="stack-label">STACK</span>OpenCV / Python / ArUco / Drone assembly / Milling</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- EXP 3: Tutoring -->
-      <div class="accordion reveal tech-frame" data-open="false">
+      <!-- EXP-003 -->
+      <div class="accordion tech-frame">
         <button class="accordion-header" aria-expanded="false">
           <div class="acc-left">
             <span class="acc-id">[EXP-003]</span>
-            <span class="acc-tag">Entrepreneurship</span>
-            <h3>Founder &amp; Lead Tutor — Dan Tutoring</h3>
-            <span class="acc-date">Aug 2025 – Present</span>
+            <span class="acc-tag">Business</span>
+            <h3>Founder and Lead Tutor, Dan Tutoring</h3>
+            <span class="acc-date">Aug 2025 to now</span>
           </div>
           <div class="acc-right">
             <span class="acc-status-text">STATUS: LOCKED</span>
@@ -426,24 +361,15 @@
         <div class="accordion-body">
           <div class="acc-inner">
             <div class="acc-media">
-              <div class="img-placeholder">
-                <img src="Pictures/tutoring-UI.png" alt="Booking System UI">
-                <p class="img-label">Booking UI</p>
-              </div>
-              <div class="img-placeholder">
-                <img src="" alt="Database Schema">
-                <p class="img-label">Database Schema</p>
-              </div>
+              <figure class="media-slot"><img src="Pictures/tutoring-UI.png" alt="Booking UI"><figcaption>Booking UI</figcaption></figure>
             </div>
             <div class="acc-details">
               <ul>
-                <li>Founded tutoring business August 2025; previously worked as math and engineering tutor Aug 2024 – May 2025</li>
-                <li>Built full-stack booking platform with database, automated email confirmation, and bilingual support</li>
-                <li>Manages scheduling, customer communication, and all business operations independently</li>
+                <li>Started the business in August 2025, after a year tutoring math and engineering (Aug 2024 to May 2025).</li>
+                <li>Built the booking platform myself (see PRJ-003).</li>
+                <li>Handle scheduling, customer communication, and the rest of the operations on my own.</li>
               </ul>
-              <div class="acc-badges">
-                <span>Full-Stack</span><span>Database Design</span><span>Business Operations</span>
-              </div>
+              <p class="stack"><span class="stack-label">STACK</span>Full-stack web / Database design / Operations</p>
             </div>
           </div>
         </div>
@@ -453,154 +379,110 @@
   </section>
 
   <!-- CERTIFICATIONS -->
-  <section class="section section-dark" id="certifications">
+  <section class="section section-alt" id="certifications">
     <div class="container">
-      <div class="section-heading-row">
-        <div>
-          <span class="section-label light">Credentials</span>
-          <h2 class="section-title light reveal">Certifications</h2>
-        </div>
-        <span class="section-enc-tag">VERIFIED: TRUE</span>
+      <div class="section-head">
+        <h2 class="section-title">Certifications</h2>
+        <span class="section-tag">VERIFIED: TRUE</span>
       </div>
 
-      <div class="cert-grid reveal">
+      <div class="record-list">
 
-        <!-- FAA Part 107 -->
-        <div class="cert-card tech-frame">
-          <div class="cert-header">
-            <span class="cert-id">[CRT-001]</span>
-            <span class="acc-tag highlight">FAA</span>
+        <article class="record">
+          <span class="record-id">[CRT-001]</span>
+          <img class="record-logo" src="Pictures/FAA.png" alt="FAA logo">
+          <div class="record-main">
+            <h3>Remote Pilot Certificate (Part 107)</h3>
+            <p class="record-org">Federal Aviation Administration</p>
+            <p class="record-detail">Licensed to fly unmanned aircraft commercially in U.S. national airspace.</p>
           </div>
-          <div class="cert-icon">
-            <img src="Pictures/FAA.png" alt="FAA Logo" style="width:28px;height:28px;">
-          </div>
-          <h3 class="cert-title">Remote Pilot Certificate</h3>
-          <p class="cert-org">Federal Aviation Administration (FAA)</p>
-          <p class="cert-detail">Part 107 — Certified to operate unmanned aircraft systems (UAS) commercially in the National Airspace System.</p>
-          <div class="acc-badges" style="margin-top:0.75rem;">
-            <span>FAA Part 107</span><span>UAS Operations</span><span>NAS Compliance</span>
-          </div>
-        </div>
+          <span class="record-state ok">VERIFIED</span>
+        </article>
 
-        <!-- CCST -->
-        <div class="cert-card tech-frame">
-          <div class="cert-header">
-            <span class="cert-id">[CRT-002]</span>
-            <span class="acc-tag wip">In Progress</span>
+        <article class="record">
+          <span class="record-id">[CRT-002]</span>
+          <img class="record-logo" src="Pictures/Cisco.png" alt="Cisco logo">
+          <div class="record-main">
+            <h3>Cisco Certified Support Technician (CCST)</h3>
+            <p class="record-org">Cisco</p>
+            <p class="record-detail">Exam scheduled. Covers network fundamentals, endpoints, and basic security.</p>
           </div>
-          <div class="cert-icon">
-            <img src="Pictures/Cisco.png" alt="Cisco Logo" style="width:28px;height:28px;">
-          </div>
-          <h3 class="cert-title">Cisco Certified Support Technician (CCST)</h3>
-          <p class="cert-org">Cisco</p>
-          <p class="cert-detail">Exam scheduled — validates foundational networking and IT support skills including network fundamentals, endpoints, and security basics.</p>
-          <div class="acc-badges" style="margin-top:0.75rem;">
-            <span>Networking</span><span>IT Support</span><span>Cisco</span>
-          </div>
-        </div>
+          <span class="record-state pending">IN PROGRESS</span>
+        </article>
 
-        <!-- BSC Certificate Placeholder -->
-        <div class="cert-card tech-frame">
-          <div class="cert-header">
-            <span class="cert-id">[CRT-003]</span>
-            <span class="acc-tag">Industry</span>
+        <article class="record">
+          <span class="record-id">[CRT-003]</span>
+          <img class="record-logo" src="Pictures/BSC_logo.png" alt="Boston Scientific logo">
+          <div class="record-main">
+            <h3>Advancing Your Career</h3>
+            <p class="record-org">Boston Scientific Corporation</p>
+            <p class="record-detail">Professional development program on resumes, prompting AI tools, interview prep, and career risk planning.</p>
+            <a class="acc-link" href="Pictures/BSC.png" target="_blank">View certificate ↗</a>
           </div>
-          <div class="cert-icon">
-           <img src="Pictures/BSC_logo.png" alt="BSC Logo" style="width:28px;height:28px;">
-          </div>
-          <h3 class="cert-title">Advancing Your Career</h3>
-          <p class="cert-org">Boston Scientific Corporation (BSC)</p>
-          <p class="cert-detail">Professional development activity covering resume strategy, AI-assisted prompting, interview preparation, and career risk planning.</p>
-          <!--
-            PLACEHOLDER: Replace the div below with your actual certificate image
-            
-          -->
-          <div class="cert-img-placeholder">
-           
-              <img src="Pictures/BSC.png" alt="BSC Certificate" style="width:100%;height:auto;">
-        </div>
+          <span class="record-state ok">COMPLETED</span>
+        </article>
 
       </div>
     </div>
   </section>
 
-  <!-- AWARDS & SCHOLARSHIPS -->
-  <section class="section section-light" id="awards">
+  <!-- AWARDS -->
+  <section class="section" id="awards">
     <div class="container">
-      <div class="section-heading-row">
-        <div>
-          <span class="section-label">Recognition</span>
-          <h2 class="section-title reveal">Awards &amp; Scholarships</h2>
-        </div>
+      <div class="section-head">
+        <h2 class="section-title">Awards</h2>
       </div>
 
-      <div class="award-card tech-frame reveal">
-        <div class="award-left">
-          <span class="award-id">[AWD-001]</span>
-          <div class="award-icon">
-           <img src="Pictures/CIAPR_logo.png" alt="CIAPR Logo" style="width:28px;height:28px;">
+      <div class="record-list">
+        <article class="record">
+          <span class="record-id">[AWD-001]</span>
+          <img class="record-logo" src="Pictures/CIAPR_logo.png" alt="CIAPR logo">
+          <div class="record-main">
+            <h3>CIAPR Scholarship</h3>
+            <p class="record-org">Colegio de Ingenieros y Agrimensores de Puerto Rico</p>
+            <p class="record-detail">Merit scholarship from Puerto Rico's professional association of engineers and surveyors.</p>
           </div>
-        </div>
-        <div class="award-body">
-          <div class="award-meta">
-            <span class="acc-tag">Scholarship</span>
-            <span class="award-date">// ACTIVE</span>
-          </div>
-          <h3 class="award-title">College of Engineers and Surveyors of Puerto Rico</h3>
-          <p class="award-org">Colegio de Ingenieros y Agrimensores de Puerto Rico (CIAPR)</p>
-          <p class="award-desc">Merit-based scholarship awarded by the professional engineering body of Puerto Rico, recognizing academic excellence and commitment to the engineering field.</p>
-          <div class="acc-badges" style="margin-top:1rem; margin-bottom:0;">
-            <span>Merit-Based</span><span>Engineering Excellence</span><span>CIAPR</span>
-          </div>
-        </div>
+          <span class="record-state pending">ACTIVE</span>
+        </article>
       </div>
-
     </div>
   </section>
 
   <!-- VOLUNTEERING -->
-  <section class="section section-dark" id="volunteering">
+  <section class="section section-alt" id="volunteering">
     <div class="container">
-      <div class="section-heading-row">
-        <div>
-          <span class="section-label light">Giving Back</span>
-          <h2 class="section-title light reveal">Volunteering &amp; Community</h2>
-        </div>
-        <span class="section-enc-tag">SWIPE TO SCAN →</span>
+      <div class="section-head">
+        <h2 class="section-title">Volunteering</h2>
       </div>
-    </div>
-    <div class="vol-scroll-wrap">
-      <div class="vol-strip">
 
-        <div class="vol-card tech-frame">
-          <div class="vol-img-wrap">
-            <div class="vol-img-placeholder"><img src="Pictures/sprouting.png" alt="SPROUTING program"></div>
-            <div class="vol-card-overlay"><span>[TEACHING_ASSISTANT]</span></div>
+      <div class="vol-grid">
+        <div class="vol-card">
+          <div class="vol-img tech-frame">
+            <img src="Pictures/sprouting.png" alt="SPROUTING program">
+            <span class="vol-tag">[TEACHING_ASSISTANT]</span>
           </div>
-          <h3>Teaching Assistant — SPROUTING</h3>
-          <p>University of Puerto Rico Mayagüez</p>
+          <h3>Teaching Assistant, SPROUTING</h3>
+          <p>University of Puerto Rico at Mayagüez</p>
         </div>
 
-        <div class="vol-card tech-frame">
-          <div class="vol-img-wrap">
-            <div class="vol-img-placeholder"><img src="Pictures/olympics.png" alt="Math Olympics"></div>
-            <div class="vol-card-overlay"><span>[MATH_OLYMPICS]</span></div>
+        <div class="vol-card">
+          <div class="vol-img tech-frame">
+            <img src="Pictures/olympics.png" alt="Math Olympics">
+            <span class="vol-tag">[MATH_OLYMPICS]</span>
           </div>
           <h3>Math Olympics Assistant</h3>
-          <p>Inter American University of Puerto Rico Bayamón</p>
+          <p>Inter American University of Puerto Rico, Bayamón</p>
         </div>
 
-        <div class="vol-card tech-frame">
-          <div class="vol-img-wrap">
-            <!--  PLACEHOLDER: " -->
-            <div class="vol-img-placeholder"><img src="Pictures/siicom_friends.png" alt="SIICOM"></div>
-            <div class="vol-card-overlay"><span>[SIICOM_FRIENDS]</span></div>
+        <div class="vol-card">
+          <div class="vol-img tech-frame">
+            <img src="Pictures/siicom_friends.png" alt="SIICOM members">
+            <span class="vol-tag">[SIICOM]</span>
           </div>
           <h3>SIICOM Member</h3>
-          <p>Student chapter of CIAPR — Colegio de Ingenieros y Agrimensores de Puerto Rico</p>
+          <p>Student chapter of CIAPR</p>
         </div>
-
-        
+      </div>
     </div>
   </section>
 
@@ -613,7 +495,7 @@
       </div>
       <div class="footer-links">
         <a href="mailto:danielbarreiro014@gmail.com">&lt; EMAIL &gt;</a>
-        <a href="https://github.com/TI-capacitor" target="_blank">&lt; GITHUB &gt;</a>
+        <a href="https://github.com/TI-capacitor" target="_blank" rel="noopener">&lt; GITHUB &gt;</a>
         <a href="./docs/resume.html" target="_blank">&lt; RESUME &gt;</a>
       </div>
     </div>
