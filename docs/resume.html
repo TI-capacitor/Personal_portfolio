@@ -95,7 +95,7 @@
   <div class="name">Daniel Barreiro Torres</div>
   <div class="profession">Computer Engineering Student — Embedded Systems &amp; Robotics</div>
   <div class="contact">
-    Dorado, PR &nbsp;|&nbsp;
+    Vega Alta, PR &nbsp;|&nbsp;
     <a href="mailto:danielbarreiro014@gmail.com">danielbarreiro014@gmail.com</a> &nbsp;|&nbsp;
     <a href="tel:+19394604198">(939) 460-4198</a> &nbsp;|&nbsp;
     <a href="https://www.linkedin.com/in/daniel-barreiro-torres">linkedin.com/in/daniel-barreiro-torres</a> &nbsp;|&nbsp;
@@ -109,7 +109,7 @@
       <span class="entry-date">Expected May 2028</span>
     </div>
     <ul>
-      <li>Ing. José Romero Villanueva Scholarship, College of Engineers and Surveyors of Puerto Rico (CIAPR); SIICOM student chapter Vocal.</li>
+      <li>Ing. José Romero Villanueva Scholarship, College of Engineers and Surveyors of Puerto Rico (CIAPR); IICOM student chapter.</li>
       <li>Relevant coursework: Electric Circuits, Logic Circuits, Microcontrollers, Advanced Programming, Aerospace PCB Design.</li>
     </ul>
   </div>
@@ -124,7 +124,7 @@
     <div class="entry-org">Dan Tutoring, Puerto Rico</div>
     <ul>
       <li>Founded a bilingual (EN/ES) engineering tutoring service for at-risk Puerto Rican students, delivering more than 40 sessions to date.</li>
-      <li>Built and deployed the booking platform in Google Apps Script: relational database, scheduling calendar, tokenized email confirmations, and reCAPTCHA v3, replacing manual scheduling with a bilingual self-serve flow.</li>
+      <li>Built and deployed the booking platform in Google Apps Script: relational database, scheduling calendar, tokenized email confirmations, and reCAPTCHA v3, replacing manual scheduling.</li>
     </ul>
   </div>
 
@@ -136,7 +136,7 @@
     <div class="entry-org">Inter American University of Puerto Rico, Bayamón</div>
     <ul>
       <li>Led a 4-member software subteam and wrote a 3-phase strategy plan, moving the project from no working prototype to a demoed autonomous system 12 weeks before the competition deadline.</li>
-      <li>Designed a MCU control system pairing an Arduino UNO with a Raspberry Pi with Serial on ROS 2 Jazzy, with a manual override failsafe.</li>
+      <li>Designed a MCU control system pairing two ESP32s SPI communication, increasing communication speed and I/O pin count.</li>
       <li>Rebuilt the navigation stack around ArUco marker detection in OpenCV, lowering the design risk enough for the team to secure sponsorship funding for its 2027–2028 competition cycle.</li>
     </ul>
   </div>
@@ -161,7 +161,7 @@
     <div class="entry-org">Inter American University of Puerto Rico, Bayamón</div>
     <ul>
       <li>Placed 3rd in a collegiate autonomous vehicle competition sponsored by RTX/Collins Aerospace.</li>
-      <li>Built a C++ control interface over serial to pass Raspberry Pi vision data to the vehicle MCU, configured ArUco marker detection over SSH, and triggered a relay-based alarm on target lock.</li>
+      <li>Built a C++ control interface over UART to pass Raspberry Pi vision data to the vehicle MCU, configured ArUco marker detection over SSH, and triggered a relay-based alarm on target lock.</li>
     </ul>
   </div>
 
@@ -169,12 +169,13 @@
 
   <div class="entry">
     <div class="entry-top">
-      <span class="entry-title">Automatic Irrigation System — Embedded C, Android, PCB</span>
+      <span class="entry-title">Automatic Irrigation System</span>
       <span class="entry-date">Summer 2026</span>
     </div>
     <ul>
-      <li>Designed a closed-loop autonomous irrigation system in response to Puerto Rico's drought crisis with an Arduino UNO: soil moisture sensor feedback driving a solenoid valve, a Bluetooth Android control app, and an off-grid battery charging circuit.</li>
+      <li>Designed a closed-loop autonomous irrigation system in response to Puerto Rico's drought crisis with an Arduino UNO; soil moisture sensor feedback driving a solenoid valve, and a 12V grid-tied charging circuit delivering 7+ days of automatic runtime.</li>
       <li>Drew the schematic and routed a custom PCB in KiCad to put the sensor, valve driver, and charging circuits on a single board, then reworked the layout after bench testing exposed back-EMF interference.</li>
+      <li>Implemented an I2C interface by replacing the parallel LCD connection, reducing wiring and power consumption and freeing physical space while increasing signal integrity.</li>
     </ul>
   </div>
 
@@ -184,7 +185,7 @@
       <span class="entry-date">Winter 2025</span>
     </div>
     <ul>
-      <li>Wrote object-oriented embedded firmware (Command and Movement classes) with serial command parsing and dual-channel H-bridge PWM motor control.</li>
+      <li>Wrote object-oriented embedded firmware (Command and Movement classes) with UART serial command parsing and dual-channel H-bridge PWM motor control.</li>
       <li>Structured the code as a reusable Eugene.h / Eugene.cpp library, which became the hardware prototype the NASA Lunabotics platform was built on.</li>
     </ul>
   </div>
@@ -201,9 +202,9 @@
   </div>
 
   <div class="sec-head">Technical Skills</div>
-  <div class="skill-line"><b>Languages:</b> C, C++, Python, MATLAB, R, Verilog, HTML/CSS</div>
-  <div class="skill-line"><b>Embedded &amp; Hardware:</b> Raspberry Pi, Arduino, Basys 3 FPGA, PWM, PCB design (KiCad, EasyEDA), Multisim, Multimeters, oscilloscopes, function generators</div>
-  <div class="skill-line"><b>Software &amp; Tools:</b> Git, Linux, Bash, Vim, SSH, OpenCV, Tkinter, RStudio, Google Apps Script, AutoCAD</div>
+  <div class="skill-line"><b>Languages:</b> C, C++, Python, R, Verilog, HTML/CSS</div>
+  <div class="skill-line"><b>Embedded &amp; Hardware:</b> Raspberry Pi, Arduino, Basys 3 FPGA, I2C, UART, SPI, PCB design (KiCad, EasyEDA), Multisim, Multimeters, oscilloscopes, function generators</div>
+  <div class="skill-line"><b>Software &amp; Tools:</b> Git, Linux, Bash, Vim, SSH, OpenCV, Tkinter, Matplotlib,RStudio, Google Apps Script, KiCad, AutoCAD</div>
  
   <!-- <div class="sec-head">Certifications</div>
 
